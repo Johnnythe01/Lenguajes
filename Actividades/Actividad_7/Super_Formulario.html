@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Formulario</title>
+</head>
+
+<body>
+    <form action="/action_page.php">
+        <p>Indique sus preferencias por favor</p>
+        <label for="fecha">Elija una fecha:</label>
+        <input type="date" name="fecha" id="fecha"><br>
+        <label for="fichero"> Elija un fichero:</label>
+        <input type="file"><br>
+        <input type="radio" id="amd" name="procesador" value="AMD">
+        <label for="amd">AMD</label>
+        <input type="radio" id="intel i5" name="procesador" value="Intel i5">
+        <label for="intel i5">Intel i5</label>
+        <input type="radio" id="intel i7" name="procesador" value="Intel i7">
+        <label for="intel i7">Intel i7</label>
+    </form>
+    <form action="/action_page.php">
+        <p>Indique sus preferencias por favor</p>
+        <input type="radio" id="matematicas" name="materia" value="Matemáticas">
+        <label for="matematicas">Matemáticas</label>
+        <input type="radio" id="historia" name="materia" value="Historia">
+        <label for="historia">Historia</label>
+        <input type="radio" id="geografia" name="materia" value="Geografia">
+        <label for="geografia">Geografia</label>
+        <input type="radio" id="lengua" name="materia" value="Lengua">
+        <label for="lengua">Lengua</label><br>
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="Nombre"><br>
+        <label for="apellidos">Apellidos</label>
+        <input type="text" id="apellidos" name="Apellidos"><br>
+        <label for="direccion">Direccion</label>
+        <input type="text" id="direccion" name="Direccion"><br>
+        <label for="favcolor">Elija un color</label>
+        <input type="color"><br>
+        <textarea style= "height:100px; width:400px"> Utilice este cuadro para escribir</textarea>
+        <label for="fecha">Elija una fecha:</label>
+        <input type="date" name="fecha" id="fecha"><br>
+        <select name="language" id="languages">
+            <option value="empty"></option>
+            <option value="ingles">Inglés</option>
+        </select><br>
+        <label for="time">Elija una hora:</label>
+        <input type="time"><br>
+        <label for="file">Elija un fichero:</label>
+        <input type="file"><br>
+        <input type="checkbox" id="mujer" name="mujer" value="Mujer">
+        <label for="mujer">Mujer</label>
+        <input type="checkbox" id="hombre" name="hombre" value="Hombre">
+        <label for="hombre">Hombre</label>
+    </form>
+</body>
+
+</html>
