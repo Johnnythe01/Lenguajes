@@ -1,0 +1,51 @@
+body {
+    background-color: #ffe4bb;
+    font-family: sans-serif;
+    margin: 10px;
+    float: left;
+}
+
+header {
+    text-align: left;
+}
+
+nav {
+    background-color: #fcf6ea;
+    float: left;
+    width: 200px;
+    padding-top: 15px;
+    padding-bottom: 30px;
+    padding-left: 10px;
+
+}
+
+main {
+    /*float: left;*/
+    padding-left: 20px;
+    margin-left: 210px;
+    background-color: #eee8dc;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.producto {
+    float: left;
+    width: 30%;
+    margin: 1%;
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.producto h3 {
+    display: inline-block;
+    margin: 0;
+}
+
+footer {
+    clear: both;
+    background-color: #e6cb92;
+    padding: 25px;
+    text-align: center;
+}
