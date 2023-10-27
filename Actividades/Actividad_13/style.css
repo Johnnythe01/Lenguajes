@@ -26,21 +26,24 @@ main {
     background-color: #eee8dc;
     padding-top: 20px;
     padding-bottom: 10px;
+    overflow: auto;
 }
 
 .producto {
     float: left;
-    width: 30%;
+    width: 200px;
     margin: 1%;
     text-align: center;
     border: 1px solid #ccc;
     padding: 10px;
     box-sizing: border-box;
+    height: 480px;
 }
 
 .producto h3 {
     display: inline-block;
     margin: 0;
+    font-size: small;
 }
 
 footer {
