@@ -10,40 +10,51 @@ header {
 }
 
 nav {
-    background-color: #fcf6ea;
+    background-color: #f7f1e6;
     float: left;
-    width: 200px;
+    width: 190px;
     padding-top: 15px;
-    padding-bottom: 30px;
+    padding-bottom: 25px;
     padding-left: 10px;
-
+    line-height: 20px;
+    font-size: small;
+}
+nav a {
+    color: blue
 }
 
 main {
     /*float: left;*/
     padding-left: 20px;
     margin-left: 210px;
-    background-color: #eee8dc;
+    background-color: #fff5df;
     padding-top: 20px;
     padding-bottom: 10px;
     overflow: auto;
 }
 
 .producto {
+    font-size: small;
     float: left;
-    width: 200px;
-    margin: 1%;
+    width: 160px;
+    margin: 10px;
     text-align: center;
-    border: 1px solid #ccc;
+    border: 1px #f3efe4;
     padding: 10px;
     box-sizing: border-box;
-    height: 480px;
+    box-shadow: 1px 2px 8px  #d1d1d1;
+    height: 400px;
 }
 
 .producto h3 {
     display: inline-block;
     margin: 0;
     font-size: small;
+    padding-top: 10px;
+}
+
+.producto a{
+    color: blue;
 }
 
 footer {
