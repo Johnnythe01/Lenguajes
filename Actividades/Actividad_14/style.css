@@ -1,0 +1,20 @@
+header {
+    font-family: 'Trebuchet MS';
+    color: white;
+    background-color: #00a2ff;
+    padding-top: 0px;
+    padding-left: 20px;
+    padding-bottom: 0px;
+}
+
+a {
+    color: white;
+    text-decoration: 0;
+    text-align: center;
+}
+nav {
+    color: white;
+    text-decoration: 0;
+    display: flex;
+    justify-content: space-between;
+}
