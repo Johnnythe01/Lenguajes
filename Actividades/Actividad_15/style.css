@@ -1,0 +1,35 @@
+main {
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: space-around;
+}
+
+.trabajador {
+    width: 300px;
+    height: 400px;
+    text-align: center;
+    transition: all 500ms;
+    padding-top: 50px;
+}
+
+.trabajador:hover {
+    transform: scale(1.1)
+}
+
+h1 {
+    padding-top: 40px;
+    font-family: Arial;
+    text-align: center;
+}
+
+img {
+    border-radius: 50%;
+    height: 180px;
+    width: 180px;
+}
+
+.subtitulo {
+    color: purple;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
