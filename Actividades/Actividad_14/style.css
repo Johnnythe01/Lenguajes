@@ -1,20 +1,40 @@
-header {
+body {
     font-family: 'Trebuchet MS';
     color: white;
-    background-color: #00a2ff;
     padding-top: 0px;
     padding-left: 20px;
     padding-bottom: 0px;
 }
 
 a {
+
     color: white;
     text-decoration: 0;
-    text-align: center;
 }
 nav {
     color: white;
+    text-align: center;
     text-decoration: 0;
+}
+ul {
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    align-self: center;
+    padding-top: 14px;
+}
+input {
+    height: 30px;
+    align-self: center;
+    border-radius: 9px;
+}
+.navigationbar {
+    background-color: #00a2ff;
     display: flex;
     justify-content: space-between;
+    padding-right: 20px;
+}
+h1 {
+    padding-left: 20px;
 }
