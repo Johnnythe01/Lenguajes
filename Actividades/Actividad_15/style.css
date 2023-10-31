@@ -2,6 +2,7 @@ main {
     display: flex;
     font-family: Arial, Helvetica, sans-serif;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .trabajador {
@@ -10,6 +11,7 @@ main {
     text-align: center;
     transition: all 500ms;
     padding-top: 50px;
+    box-shadow: 1px 2px 8px #6b6b6b;
 }
 
 .trabajador:hover {
