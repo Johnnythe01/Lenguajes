@@ -1,6 +1,6 @@
 main {
     display: flex;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: sans-serif;
     justify-content: space-around;
     flex-wrap: wrap;
 }
@@ -15,7 +15,7 @@ main {
 }
 
 .trabajador:hover {
-    transform: scale(1.1)
+    transform: scale(1.05)
 }
 
 h1 {
@@ -33,5 +33,5 @@ img {
 
 .subtitulo {
     color: purple;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial;
 }
