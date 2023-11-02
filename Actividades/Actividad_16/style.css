@@ -1,11 +1,35 @@
 main {
-
+    font-family: sans-serif;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    display: flex;
 }
 
 div {
 
 }
 
+img {
+    height: 400px;
+    width: 270px;
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
+}
+
+h2 {
+    font-size: medium;
+}
+
 .destinos {
-    
+    height: 400px;
+    width: 270px;
+    box-shadow: 4px 4px 4px #131313;
+    transition: all 500ms;
+}
+.destinos:hover {
+    transform: scale(1.05)
+}
+
+.basictext {
+font-size: small;
 }
