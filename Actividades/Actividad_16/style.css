@@ -14,6 +14,7 @@ img {
     width: 270px;
     border-top-right-radius: 7px;
     border-top-left-radius: 7px;
+
 }
 
 h2 {
@@ -21,10 +22,12 @@ h2 {
 }
 
 .destinos {
-    height: 400px;
+    height: 550px;
     width: 270px;
-    box-shadow: 4px 4px 4px #131313;
+    box-shadow: 2px 3px 3px 1px #131313;
     transition: all 500ms;
+    margin-bottom: 20px;
+    margin: 10px;
 }
 .destinos:hover {
     transform: scale(1.05)
