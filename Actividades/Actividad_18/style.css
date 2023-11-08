@@ -1,0 +1,49 @@
+body {
+    transition: background-color 0.5s;
+    background-color: rgb(255, 246, 226);
+}
+
+.special::after {
+    content: "La pantalla es menor que: ~";
+    display: block;
+}
+
+@media screen and (max-width: 1200px) {
+    body {
+        background-color: #00ffea;
+    }
+
+    .special::after {
+        content: "La pantalla es menor que: 1200px";
+    }
+}
+
+@media screen and (max-width: 900px) {
+    body {
+        background-color: #ff0000;
+    }
+
+    .special::after {
+        content: "La pantalla es menor que: 900px";
+    }
+}
+
+@media screen and (max-width: 700px) {
+    body {
+        background-color: #00850b;
+    }
+
+    .special::after {
+        content: "La pantalla es menor que: 700px";
+    }
+}
+
+@media screen and (max-width:500px) {
+    body {
+        background-color: #fbff00;
+    }
+
+    .special::after {
+        content: "La pantalla es menor que: 500px";
+    }
+}
