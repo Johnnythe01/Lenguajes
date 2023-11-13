@@ -7,15 +7,14 @@ body {
 }
 
 a {
-
     color: white;
-    text-decoration: 0;
+    text-decoration: none;
 }
 
 nav {
     color: white;
     text-align: center;
-    text-decoration: 0;
+    text-decoration: none;
 }
 
 ul {
@@ -56,11 +55,18 @@ h1 {
 }
 
 @media only screen and (max-width: 560px) {
+   /** Me he comido este, a pesar de que lo puse en un principio, 
+   porque haciendo pruebas no veia diferencia, parece que 
+   el anterio anula este "repetido", no se si es correcto.
+   nav {
+        display: none;
+    }
+    **/
     input {
         display: none;
     }
 
-    body::after {
+    .navigationbar::after {
         content: "☰";
         font-size: 24px;
     }
