@@ -1,13 +1,11 @@
 body {
     font-family: 'Trebuchet MS';
-
     padding-top: 0px;
-    padding-left: 20px;
+    padding-left: 5px;
     padding-bottom: 0px;
 }
 
-a {
-
+ul a {
     color: white;
     text-decoration: 0;
 }
@@ -45,8 +43,13 @@ h1 {
     color: white;
 }
 
+main {
+    padding: 10%;
+}
+
 h3 {
     font-size: 27px;
+    margin-top: 14%;
 }
 
 h4 {
@@ -55,27 +58,71 @@ h4 {
 }
 
 .equipo {
-    float: right;
+    float: inline-end;
     height: 400px;
     width: 460px;
     border-radius: 3%;
 }
 
-.textobase {
-    
+.Servicios {
+    text-align: center;
+    width: 270px;
+    height: 400px;
+    margin-bottom: 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    padding-top: 100px;
+    padding-left: 80px;
 }
 
-.servicios {
-    display: flex;
-    flex-wrap: wrap;
-    text-align: center;
+.column1 {
+    display: grid;
+    grid-column: 1 / 1;
+}
+
+.column2 {
+    display: grid;
+    grid-column: 2 / 2;
+}
+
+.column3 {
+    display: grid;
+    grid-column: 3 / 3;
+}
+
+.column4 {
+    display: grid;
+    grid-column: 4 / 4;
 }
 
 .caracteristicas {
     text-align: center;
 }
 
+.Portfolio {
+    hacer que vayan en linea
+}
 
+a {
+    color: #00a2ff;
+    font-size: 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contacto {
+    text-align: center;
+}
+
+footer {
+    background-color: gray;
+    color: white;
+}
+
+.footer .a {
+color: lightgray;
+}
 
 @media only screen and (max-width: 860px) {
     nav {
