@@ -64,10 +64,16 @@ h4 {
     border-radius: 3%;
 }
 
+.iconos {
+    width: 80px;
+    height: 80px;
+}
+
 .Servicios {
     text-align: center;
     width: 270px;
     height: 400px;
+    padding-block: 50px;
     margin-bottom: 5%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -101,7 +107,12 @@ h4 {
 }
 
 .Portfolio {
-    hacer que vayan en linea
+    text-align: center;
+    width: 270px;
+    height: 400px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
 }
 
 a {
@@ -121,7 +132,7 @@ footer {
 }
 
 .footer .a {
-color: lightgray;
+    color: lightgray;
 }
 
 @media only screen and (max-width: 860px) {
