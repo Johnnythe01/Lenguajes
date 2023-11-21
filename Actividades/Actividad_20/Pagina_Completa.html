@@ -22,9 +22,9 @@
         </nav>
         <input type="search" name="Busca" placeholder=" Buscar">
     </div>
-    <main>
-        <div class="SobreNosotros">
-            <img class="equipo" src="randoms.jpeg">
+    <div class="SobreNosotros">
+        <img class="equipo" src="randoms.jpeg">
+        <div class="nosotros">
             <h2>Sobre nosotros</h2>
             <p>CIDETech es una empresa lider en soluciones tecnológicas, dedicada a traer las últimas
                 innovaciones al mercado. </p>
@@ -32,99 +32,124 @@
                 objetivo es transformar la manera</p>
             <p>en que las empresas interactuan con sus clientes a través de soluciones
                 digitales a medida.</p>
-            <p></p>
             <p>Desde 2003 hemos trabajado con una amplia gama de clientes para optimizar sus procesos
                 de
                 negocio,</p>
             <p>su presencia en línea y proporcionar experiencias de usuario excepcionales.</p>
         </div>
-        <h3>Nuestros Servicios</h3>
-        <div class="Servicios">
-            <div class="column1 columnas">
-                <div class="centrado">
-                    <img src="diseno-grafico.png" class="iconos">
-                </div>
-                <h4>Diseño Gráfico</h4>
-                <p class="caracteristicas">Creación de soluciones visuales para tu marca, incluyendo logotipos,
-                    identidad
-                    corporativa y publicidad.</p>
+    </div>
+    <h3>Nuestros Servicios</h3>
+    <div class="Servicios">
+        <div class="column1 columnas">
+            <div class="centrado">
+                <img src="diseno-grafico.png" class="iconos">
             </div>
-            <div class="column2 columnas">
-                <div class="centrado">
-                    <img src="desarrollador-de-software.png" class="iconos">
-                </div>
-                <h4>Desarrollo Web y videojuegos</h4>
-                <p class="caracteristicas">Desarrollo de páginas web personalizadas, desde páginas corportativas hasta
-                    tiendas en línea complejas.</p>
-            </div>
-            <div class="column3 columnas">
-                <div class="centrado">
-                <img src="seo.png" class="iconos">
-                </div>
-                <h4>SEO y Marketing Digital</h4>
-                <p class="caracteristicas">Optimización para motores de busqueda y estratégias de marketing para mejorar
-                    tu
-                    visibilidad en linea.</p>
-            </div>
-            <div class="column4 columnas">
-                <div class="centrado">
-                    <img src="soporte-tecnico.png" class="iconos">
-                </div>
-                <h4>Soporte Técnico</h4>
-                <p class="caracteristicas">Asistencia técnica y soporte continuo para todos nuestros productos y
-                    servicios.
-                </p>
-            </div>
+            <h4>Diseño Gráfico</h4>
+            <p class="caracteristicas">Creación de soluciones visuales para tu marca, incluyendo logotipos,
+                identidad
+                corporativa y publicidad.</p>
         </div>
-        <div class="Portfolio">
-            <div class="proyecto">
-            <h3>Nuestro Portfolio</h3>
+        <div class="column2 columnas">
+            <div class="centrado">
+                <img src="desarrollador-de-software.png" class="iconos">
+            </div>
+            <h4>Desarrollo Web y videojuegos</h4>
+            <p class="caracteristicas">Desarrollo de páginas web personalizadas, desde páginas corportativas hasta
+                tiendas en línea complejas.</p>
+        </div>
+        <div class="column3 columnas">
+            <div class="centrado">
+                <img src="seo.png" class="iconos">
+            </div>
+            <h4>SEO y Marketing Digital</h4>
+            <p class="caracteristicas">Optimización para motores de busqueda y estratégias de marketing para mejorar
+                tu
+                visibilidad en linea.</p>
+        </div>
+        <div class="column4 columnas">
+            <div class="centrado">
+                <img src="soporte-tecnico.png" class="iconos">
+            </div>
+            <h4>Soporte Técnico</h4>
+            <p class="caracteristicas">Asistencia técnica y soporte continuo para todos nuestros productos y
+                servicios.
+            </p>
+        </div>
+    </div>
+    <div class="Portfolio">
+        <h5>Nuestro Portfolio</h5>
+        <div class="proyecto column1">
             <img src="proyecto1.jpg" class="portfotos">
             <h4>Proyecto 1</h4>
-            <p>Breve descripción del proyecto</p>
+            <p>Breve descripción del proyecto.</p>
             <a href="detalles">Ver detalles</a>
+        </div>
+        <div class="proyecto column2">
             <img src="proyecto2.jpg" class="portfotos">
+            <h4>Proyecto 2</h4>
+            <p>Breve descripción del proyecto.</p>
+            <a href="detalles">Ver detalles</a>
+        </div>
+        <div class="proyecto column3">
+            <img src="proyecto3.jpg" class="portfotos">
+            <h4>Proyecto 3</h4>
+            <p>Breve descripción del proyecto.</p>
+            <a href="detalles">Ver detalles</a>
+        </div>
+    </div>
 
-            <div class="proyecto">
-                <h4>Proyecto 2</h4>
-                <p>Breve descripción del proyecto</p>
-                <a href="detalles">Ver detalles</a>
-                <img src="proyecto3.jpg" class="portfotos">
+    <div class="contacto">
+        <h6>Contáctanos</h6>
+        <p>Si tienes alguna duda, no dudes en contactarnos a través del siguiente formulario.</p>
+        <div class="form">
+            <div class="input-row">
+                <label for="nombre">Nombre:</label>
+                <p><input type="text" id="nombre" name="Nombre"></p>
             </div>
-            <div class="proyecto">
-                <h4>Proyecto 3</h4>
-                <p>Breve descripción del proyecto</p>
-                <a href="detalles">Ver detalles</a>
+            <div class="input-row">
+                <label for="correoelectronico">Correo electrónico:</label>
+                <input type="text" id="correoelectronico" name="Correo">
+            </div>
+            <div class="input-row">
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" rows="4"></textarea>
+            </div>
+            <div class="input-row">
+                <button type="submit">Enviar mensaje</button>
             </div>
         </div>
-    </main>
-    <div class="contacto">
-        <h3>Contáctanos</h3>
-        <p>Si tienes alguna duda, no dudes en contactarnos a través del siguiente formulario</p>
-        <p>Nombre</p>
-        <p>Correo electrónico</p>
-        <p>Mensaje</p>
-        <p>Enviar mensaje (boton de mensaje)</p>
     </div>
     <footer>
-        <h5>CIDETech</h5>
-        <p>CIDETech es una empresa líder en soluciones tecnológicas, dedicada a </p>
-        <p>traer las últimas innovaciones al mercado.</p>
-        <h5>Navegación</h5>
-        <a href="SobreNosotros">Sobre Nosotros</a>
-        <a href="Servicios">Servicios</a>
-        <a href="Portfolio">portfolio</a>
-        <a href="Contacto">Contacto</a>
-        <h5>Contactanos</h5>
-        <p>971 606 499</p>
-        <p>info@cidetech.com</p>
-        <p>Carrer de l'Arner 3, Palma</p>
-        <h5>Redes Sociales</h5>
-        <img src="" F>
-        <img src="" X>
-        <img src="" I>
-        <img src="" in>
-        <p>(C) 2023 CIDETech | Diseñado por @menendezjaume</p>
+        <div class="footgrid">
+        <div class="foot column1">
+            <h5>CIDETech</h5>
+            <p>CIDETech es una empresa líder en soluciones tecnológicas, dedicada a 
+                traer las últimas innovaciones al mercado.</p>
+        </div>
+        <div class="foot column2">
+            <h5>Navegación</h5>
+            <p><a href="SobreNosotros">Sobre Nosotros</a></p>
+            <p><a href="Servicios">Servicios</a></p>
+            <p><a href="Portfolio">portfolio</a></p>
+            <p><a href="Contacto">Contacto</a></p>
+        </div>
+        <div class="foot column3">
+            <h5>Contactanos</h5>
+            <p>971 606 499</p>
+            <p>info@cidetech.com</p>
+            <p>Carrer de l'Arner 3, Palma</p>
+        </div>
+        <div class="foot column4">
+            <h5>Redes Sociales</h5>
+            <img src="facebook.png" class="redes">
+            <img src="gorjeo.png" class="redes">
+            <img src="instagram.png" class="redes">
+            <img src="linkedin.png" class="redes">
+        </div>
+    </div>
+        <div class="final">
+            <p>(C) 2023 CIDETech | Diseñado por @menendezjaume</p>
+        </div>
     </footer>
 </body>
 
