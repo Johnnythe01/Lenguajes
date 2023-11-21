@@ -22,7 +22,7 @@ ul {
     padding-top: 14px;
 }
 
-input {
+nav input {
     height: 35px;
     align-self: center;
     border-radius: 9px;
@@ -35,53 +35,38 @@ input {
     padding-right: 20px;
 }
 
-h1 {
-    padding-left: 20px;
-    color: white;
-}
-
-h2 {
-    font-size: 40px;
-}
-
-h3 {
-    font-size: 44px;
-    margin-left: 200px;
-    padding-top: 60px;
-}
-
-h4 {
-    margin-top: 50px;
-    color: #00a2ff;
-    font-size: 23px;
-}
-
-h5 {
-    font-size: 20px;
-}
-
-h6 {
-    font-size: 22px;
+.fondogris {
+    background-color: #c7c7c7;
 }
 
 .SobreNosotros {
-    background-color: #e4e4e4;
-    width: 100%;
-    height: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 50px;
+    padding-top: 50px;
 }
 
 .nosotros {
-    margin-left: 200px;
-    padding-top: 160px;
+    width: 50%;
+    padding-right: px;
 }
 
-.equipo {
-    float: right;
-    margin-top: 40px;
-    margin-right: 12%;
-    height: 470px;
-    width: 550px;
-    border-radius: 3%;
+.contenedor {
+    width: 80%;
+    margin: auto;
+}
+
+.imagen {
+    width: 50%;
+    text-align: center;
+}
+
+.imagen img {
+    width: 400px;
+    height: 300px;
+    border-radius: 10px;
 }
 
 .iconos {
@@ -94,10 +79,6 @@ h6 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-    width: 75%;
-    margin-top: 70px;
-    margin-left: 12%;
-    gap: 40px;
 }
 
 .centrado {
@@ -106,13 +87,16 @@ h6 {
 
 .columnas {
     display: grid;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: auto;
     box-shadow: 1px 1px 7px #bbbbbb;
     border-radius: 7px;
     padding: 16px;
-    width: 220px;
-    height: 350px;
     background-color: #f3f3f3;
+    transition: all 300ms;
+}
+
+.columnas:hover {
+    transform: scale(1.05) ;
 }
 
 .column1 {
@@ -136,31 +120,27 @@ h6 {
 }
 
 .Portfolio {
-    background-color: #e4e4e4;
-    margin-top: 80px;
     display: grid;
-    row-gap: 40px;
-    padding-bottom: 60px;
-    padding-left: 180px;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
-/*me ha faltado aqui ajustar las columnas un pelin*/
 .proyecto {
     background-color: #ffffff;
-    height: 560px;
-    width: 400px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    text-align: center;
     box-shadow: 1px 2px 8px #6b6b6b;
     border-radius: 7px;
+    transition: all 300ms;
+}
+
+.proyecto:hover {
+    transform: scale(1.05) ;
 }
 
 .portfotos {
-    width: 400px;
-    height: 350px;
     border-top-right-radius: 7px;
     border-top-left-radius: 7px;
+    height: auto;
+    width: 100%;
 }
 
 a {
@@ -170,40 +150,26 @@ a {
     font-weight: bold;
 }
 
-.contacto {
+.infocontacto {
     text-align: center;
-    padding-top: 35px;
 }
 
-.form {
-    padding-top: 20px;
+.contacto {
+    padding-top: 35px;
     display: flex;
     flex-direction: column;
-    margin: auto;
-    width: 1000px;
-}
-
-.input-row {
-    text-align: left;
-    padding-bottom: 10px;
-}
-
-input[type="text"] {
-    width: 1000px;
-    box-sizing: border-box;
+    align-items: stretch;
 }
 
 textarea {
-    width: 1000px;
     height: 160px;
     border-radius: 6px;
 }
 
-button[type="submit"] {
+button {
     background-color: #00a2ff;
     color: #ffffff;
     align-items: center;
-    width: 1000px;
     height: 30px;
     border-radius: 5px;
 }
@@ -215,19 +181,23 @@ footer {
     padding-top: 30px;
 }
 
-.footgrid {
+.fondonegro {
     background-color: rgb(46, 46, 46);
+}
+
+.footgrid {
     color: white;
     display: grid;
     text-align: center;
-    padding-left: 500px;
-    padding-right: 550px;
+    width: 60%;
+    margin: auto;
 }
 
 .foot {
     margin-bottom: 40px;
-    width: 230px;
+    width: 150px;
     text-align: left;
+    padding: 0 50px;
 }
 
 .redes {
@@ -243,7 +213,12 @@ footer {
     text-align: center;
 }
 
-@media only screen and (max-width: 860px) {
+.final a{
+    color: #8c00ff;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 1024px) {
     nav {
         display: none;
     }
@@ -252,10 +227,38 @@ footer {
         content: "☰";
         font-size: 24px;
     }
+    .SobreNosotros {
+        flex-direction: column;
+    }
+    .Servicios {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .column1 {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+    .column2 {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+    }
+    .column3 {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+    .column4 {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+    }
+    .imagen img{
+        width: 350px;
+        height: 250px;
+    }
 }
 
 @media only screen and (max-width: 560px) {
-    input {
+    .navigationbar input {
         display: none;
     }
 
@@ -263,5 +266,47 @@ footer {
         content: "☰";
         font-size: 24px;
     }
+    .SobreNosotros {
+        flex-direction: column;
+    }
+    .Servicios {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+
+    .Portfolio {
+        grid-template-columns: 1fr;
+    }
+
+    .nosotros {
+        width: 80%;
+    }
+
+    .contenedor {
+        width: 100%;
+        margin: auto;
+    }
+
+    .column1 {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+    .column2 {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+    .column3 {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+    }
+    .column4 {
+        grid-column: 1 / 2;
+        grid-row: 4 / 5;
+    }
+    .imagen{
+        width: 80%;
+    }
 }
+
 
