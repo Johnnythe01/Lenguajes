@@ -4,13 +4,13 @@ body {
 
 ul a {
     color: white;
-    text-decoration: 0;
+    text-decoration: none;
 }
 
 nav {
     color: white;
     text-align: center;
-    text-decoration: 0;
+    text-decoration: none;
 }
 
 ul {
@@ -297,30 +297,49 @@ footer {
         font-size: 24px;
         color: white;
     }
+
     .SobreNosotros {
         flex-direction: column;
     }
+
     .Servicios {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
+
     }
+
+    .Portfolio {
+        grid-template-columns: 1fr;
+        padding-left: 18px;
+    }
+
+    .proyecto {
+        margin-bottom: 45px;
+    }
+
     .column1 {
         grid-column: 1 / 2;
         grid-row: 1 / 2;
     }
+
     .column2 {
         grid-column: 2 / 3;
         grid-row: 1 / 2;
     }
+
     .column3 {
         grid-column: 1 / 2;
         grid-row: 2 / 3;
+        margin-top: 15px;
     }
+
     .column4 {
         grid-column: 2 / 3;
         grid-row: 2 / 3;
+        margin-top: 15px;
     }
+
     .imagen img{
         width: 350px;
         height: 250px;
@@ -332,7 +351,6 @@ footer {
         display: none;
     }
 
-    }
     .SobreNosotros {
         flex-direction: column;
     }
@@ -411,3 +429,4 @@ footer {
     .imagen{
         width: 80%;
     }
+}
