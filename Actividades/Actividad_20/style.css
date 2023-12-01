@@ -4,13 +4,13 @@ body {
 
 ul a {
     color: white;
-    text-decoration: 0;
+    text-decoration: none;
 }
 
 nav {
     color: white;
     text-align: center;
-    text-decoration: 0;
+    text-decoration: none;
 }
 
 ul {
@@ -22,10 +22,11 @@ ul {
     padding-top: 14px;
 }
 
-nav input {
-    height: 35px;
+.inputnav {
     align-self: center;
     border-radius: 9px;
+    height: 40px;
+    width: 220px;
 }
 
 .navigationbar {
@@ -33,10 +34,20 @@ nav input {
     display: flex;
     justify-content: space-between;
     padding-right: 20px;
+    
 }
 
 .fondogris {
-    background-color: #c7c7c7;
+    background-color: #eeeeee;
+}
+
+.navigationbar h1 {
+    color: white;
+    padding-left: 20px;
+}
+
+h2 {
+font-size: 32px;
 }
 
 .SobreNosotros {
@@ -75,10 +86,21 @@ nav input {
 
 .Servicios {
     text-align: center;
-    height: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
+        margin-left: 100px;
+}
+
+.Servicios h4 {
+    color: #00a2ff;
+    font-size: larger;
+}
+
+.paddingtop {
+    padding-top: 60px;
 }
 
 .centrado {
@@ -90,9 +112,11 @@ nav input {
     grid-template-rows: auto;
     box-shadow: 1px 1px 7px #bbbbbb;
     border-radius: 7px;
-    padding: 16px;
+    padding: 20px;
     background-color: #f3f3f3;
     transition: all 300ms;
+    width: 200px;
+    height: 300px;
 }
 
 .columnas:hover {
@@ -115,6 +139,23 @@ nav input {
     grid-column: 4 / 5;
 }
 
+.footcolumn1 {
+    grid-column: 1 / 2;
+}
+
+.footcolumn2 {
+    grid-column: 2 / 3;
+}
+
+.footcolumn3 {
+    grid-column: 3 / 4;
+}
+
+.footcolumn4 {
+    grid-column: 4 / 5;
+}
+
+
 .caracteristicas {
     text-align: center;
 }
@@ -122,6 +163,14 @@ nav input {
 .Portfolio {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    padding-top: 30px;
+    padding-bottom: 60px;
+    margin-left: 100px;
+}
+
+.Portfolio h4 {
+    color: #00a2ff;
+    font-size: larger;
 }
 
 .proyecto {
@@ -130,6 +179,8 @@ nav input {
     box-shadow: 1px 2px 8px #6b6b6b;
     border-radius: 7px;
     transition: all 300ms;
+    width: 380px;
+    height: 430px;
 }
 
 .proyecto:hover {
@@ -139,8 +190,8 @@ nav input {
 .portfotos {
     border-top-right-radius: 7px;
     border-top-left-radius: 7px;
-    height: auto;
-    width: 100%;
+    height: 280px;
+    width: 380px;
 }
 
 a {
@@ -161,6 +212,14 @@ a {
     align-items: stretch;
 }
 
+.infocontacto h3 {
+    font-size: 23px;
+}
+
+input {
+    height: 25px;
+}
+
 textarea {
     height: 160px;
     border-radius: 6px;
@@ -172,6 +231,14 @@ button {
     align-items: center;
     height: 30px;
     border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+
+.margins {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
 }
 
 footer {
@@ -193,9 +260,13 @@ footer {
     margin: auto;
 }
 
+.footgrid h3 {
+    font-weight: bold;
+}
+
 .foot {
     margin-bottom: 40px;
-    width: 150px;
+    width: 210px;
     text-align: left;
     padding: 0 50px;
 }
@@ -204,7 +275,7 @@ footer {
     width: 30px;
 }
 
-.foot.column2 a {
+.footcolumn2 a {
     color: rgb(173, 173, 173);
     text-decoration: none;
 }
@@ -226,31 +297,76 @@ footer {
     .navigationbar::after {
         content: "☰";
         font-size: 24px;
+        color: white;
     }
+
     .SobreNosotros {
-        flex-direction: column;
+        flex-direction: row;
     }
+
     .Servicios {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
     }
+
+    .Portfolio {
+        grid-template-columns: 1fr;
+    }
+
+    .proyecto {
+        margin-bottom: 45px;
+        margin-left: 120px;
+    }
+
+    .footer {
+        width: 100%;
+    }
+
+    .footgrid {
+        width: 100%
+    }
+
     .column1 {
         grid-column: 1 / 2;
         grid-row: 1 / 2;
     }
+
     .column2 {
         grid-column: 2 / 3;
         grid-row: 1 / 2;
     }
+
     .column3 {
         grid-column: 1 / 2;
         grid-row: 2 / 3;
+        margin-top: 15px;
     }
+
     .column4 {
         grid-column: 2 / 3;
         grid-row: 2 / 3;
+        margin-top: 15px;
     }
+
+    .footcolumn1 {
+        grid-column: 1 / 2;
+    }
+
+    .footcolumn2 {
+        grid-column: 2 / 3;
+    }
+
+    .footcolumn3 {
+        grid-column: 3 / 4;
+    }
+
+    .footcolumn4 {
+        grid-column: 1 / 2;
+        grid-row: 4 / 5;
+    }
+
+
     .imagen img{
         width: 350px;
         height: 250px;
@@ -262,21 +378,37 @@ footer {
         display: none;
     }
 
-    body::after {
-        content: "☰";
-        font-size: 24px;
-    }
     .SobreNosotros {
         flex-direction: column;
     }
+
     .Servicios {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
     }
 
+    h2 {
+        text-align: center;
+    }
+
     .Portfolio {
         grid-template-columns: 1fr;
+        padding-left: 18px;
+        width: 90%;
+        margin-left: 20px;
+        margin-right: 0px;
+    }
+
+    .proyecto {
+        margin-top: 25px;
+        width: 90%;
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+
+    .portfotos {
+        width: 100%;
     }
 
     .nosotros {
@@ -288,25 +420,54 @@ footer {
         margin: auto;
     }
 
-    .column1 {
+    .footcolumn1 {
         grid-column: 1 / 2;
         grid-row: 1 / 2;
     }
+
+    .footcolumn2 {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        padding-left: 100px;
+    }
+
+    .footcolumn3 {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+        padding-left: 100px;
+    }
+
+    .footcolumn4 {
+        grid-column: 1 / 2;
+        grid-row: 4 / 5;
+        padding-left: 100px;
+    }
+
+    .column1 {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;   
+        margin-top: 15px;
+    }
+
     .column2 {
         grid-column: 1 / 2;
         grid-row: 2 / 3;
+        margin-top: 15px;
     }
+
     .column3 {
         grid-column: 1 / 2;
         grid-row: 3 / 4;
+        margin-top: 15px;
     }
+
     .column4 {
         grid-column: 1 / 2;
         grid-row: 4 / 5;
+        margin-top: 15px;
     }
+
     .imagen{
         width: 80%;
     }
 }
-
-
