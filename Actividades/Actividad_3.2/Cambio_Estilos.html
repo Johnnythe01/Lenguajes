@@ -23,7 +23,8 @@
         <p>Desarrolló su primera propuesta de la Web el 12 de marzo de 1989, 2 pero no tuvo mucho eco, por lo que en
             1990 y con la ayuda de <i>Robert Cailliau</i>, hicieron una revisión que fue aceptada por su gerente,
             <i>Mike
-                Sendall</i>.</p>
+                Sendall</i>.
+        </p>
         <p>Usó ideas similares a las que había usado en el sistema <i>Enquire</i>, para crear la <b>World Wide Web</b>,
             para esto diseñó y construyó el primer navegador (llamado WorldWideWeb y desarrollado con
             NEXSTEP)y el primer servidor web al que llamó httpd (HyperText Transfer Protocol daemon).</p>
@@ -39,7 +40,8 @@
         <h2>El nacimiento del W3C</h2>
         <p>En 1994 entró en el <i>Laboratorio de Ciencias de la Computación e Inteligencia Artificial</i> del
             <i>Massachussetts Institute of Technology</i>. Se trasladó a EE.UU. y puso en marcha el <b>W3C</b>, que
-            dirige actualmente.</p>
+            dirige actualmente.
+        </p>
         <p>El <b>W3C</b> es un organismo internacional de estandarización de tecnologías Web dirigido conjuntamente por
             el <i>Instituto Tecnológico de Massachussetts</i>, el <i>ERCIM francés</i> y la <i>Universidad de Keiõ</i>
             en
@@ -54,29 +56,29 @@
         <button class="btn" onclick="reducirTamano()">Reducir Tamaño</button>
     </div>
     <script>
-        function aumentarTamano(){
+        function aumentarTamano() {
             let parrafos = document.querySelectorAll("p")
-            for (const parrafo of parrafos){
+            for (const parrafo of parrafos) {
                 let size = parseInt(parrafo.style.fontSize)
-                if (!size){
-                    parrafo.style.fontSize= "16px"
+                if (!size) {
+                    parrafo.style.fontSize = "16px"
                 }
                 size += 1;
                 parrafo.style.fontSize = size + "px"
-                }
             }
-            function reducirTamano(){
-                let parrafos = document.querySelectorAll("p")
-            for (const parrafo of parrafos){
+        }
+        function reducirTamano() {
+            let parrafos = document.querySelectorAll("p")
+            for (const parrafo of parrafos) {
                 let size = parseInt(parrafo.style.fontSize)
-                if (!size){
-                    parrafo.style.fontSize= "16px"
+                if (!size) {
+                    parrafo.style.fontSize = "16px"
                 }
                 size -= 1;
                 parrafo.style.fontSize = size + "px"
-                }
             }
-</script>
+        }
+    </script>
 </body>
 
 </html>
