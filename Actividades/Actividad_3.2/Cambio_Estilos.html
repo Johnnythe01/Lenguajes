@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tim Berners Lee</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <h1>Biografía de Tim Berners Lee</h1>
-    <div id="content">
+    <div id="div" class="funcion1">
         <p><b>Berners-Lee</b> trabajó en el <b>CERN</b> desde junio hasta diciembre de 1980. Durante ese tiempo, propuso
             un proyecto basado en el <i>hipertexto</i> para facilitar la forma de compartir y la puesta al día de la
             información entre
@@ -52,31 +53,19 @@
                 libre y gratis. Se considera al mismo tiempo el inventor y el protector de la web.</b></p>
     </div>
     <div>
-        <button class="btn" onclick="aumentarTamano()">Aumentar Tamaño</button>
-        <button class="btn" onclick="reducirTamano()">Reducir Tamaño</button>
+        <button onclick="aumentarTamano()">Aumentar Tamaño</button>
+        <button onclick="reducirTamano()">Reducir Tamaño</button>
     </div>
     <script>
         function aumentarTamano() {
-            let parrafos = document.querySelectorAll("p")
-            for (const parrafo of parrafos) {
-                let size = parseInt(parrafo.style.fontSize)
-                if (!size) {
-                    parrafo.style.fontSize = "16px"
-                }
-                size += 1;
-                parrafo.style.fontSize = size + "px"
-            }
+            let parrafos = document.getElementById("div");
+            parrafos.classList.remove("funcion1")
+            parrafos.classList.add("funcion2");
         }
         function reducirTamano() {
-            let parrafos = document.querySelectorAll("p")
-            for (const parrafo of parrafos) {
-                let size = parseInt(parrafo.style.fontSize)
-                if (!size) {
-                    parrafo.style.fontSize = "16px"
-                }
-                size -= 1;
-                parrafo.style.fontSize = size + "px"
-            }
+            let parrafos = document.getElementById("div");
+            parrafos.classList.remove("funcion2")
+            parrafos.classList.add("funcion1");
         }
     </script>
 </body>
