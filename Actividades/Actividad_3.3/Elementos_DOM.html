@@ -50,24 +50,14 @@
     <button onclick="agregarElemento()">Agregar elemento</button>
     <button onclick="eliminarElemento()">Eliminar elemento anterior</button>
     <script>
+        let nuevoElemento = document.createElement("div");
         function agregarElemento() {
-            //crea un nuevo elemento div
-            var nuevoElemento = document.createElement("div");
-            nuevoElemento.textContent = lorem;
-
-            // Agrega el nuevo elemento al final del cuerpo del documento
+            nuevoElemento.textContent = "lorem";
             document.body.appendChild(nuevoElemento);
         }
 
         function eliminarElemento() {
-            var elementos = document.getElementsByTagName("div");
-            var ultimoElemento = elementos[elementos.length - 1];
-
-            // Verifica si hay elementos a eliminar antes de hacerlo
-            if (ultimoElemento) {
-                // Elimina el ultimo elemento encontrado
-                ultimoElemento.parentNode.removeChild(ultimoElemento);
-            }
+            document.body.removeChild(nuevoElemento);
         }
     </script>
 </body>
