@@ -5,25 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestion de eventos</title>
-    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <p id="div">Buenah! estoy en español, obviamente.</p>
-    <button id="boton1">Boton A</button>
-    <button id="boton2">Boton B</button>
+    <p>Buenah! estoy en español, obviamente.</p>
+    <button id="boton1">Boton Traductor</button>
+    <button id="boton2">Boton Inútil</button>
     <script>
         let boto = document.getElementById("boton1")
-        let Boolean = true
+        let textoEnEspañol = true
 
-        boto.addEventListener("click", function () {
-            let div = document.getElementById("div")
-            if (Boolean == true) {
-                div.textContent = "Buenah! estoy en español, obviamente.";
-                Boolean = false
+        boton.addEventListener("click", function () {
+            let parrafo = document.querySelector("p")
+            if (textoEnEspañol == false) {
+                parrafo.textContent = "Buenas! estoy en español, obviamente.";
+                textoEnEspañol = true
             } else {
-                div.textContent = "Yoo! I'm in english, obviously.";
-                Boolean = true
+                parrafo.textContent = "Hello! I'm in english, obviously.";
+                textoEnEspañol = false
             }
         });
 
@@ -31,8 +30,9 @@
         colorBoton.addEventListener("mouseover", function () {
             document.getElementById("boton2").style.backgroundColor = "grey"
         });
-
-
+        colorBoton.addEventListener("mouseleave", function () {
+            document.getElementById("boton2").style.backgroundColor = ""
+        });
 
     </script>
 </body>
