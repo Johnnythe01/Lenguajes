@@ -1,15 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CSS en JavaScript</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    constr ps = dom.qsa ("p") | query selector all, elegimos todos los parrafos del texto.
+    <div id="div">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis beatae minus veritatis porro facere recusandae.
+        Tenetur non earum harum blanditiis, velit ea aspernatur voluptatibus quasi accusantium minus hic inventore
+        quisquam.</p>
+    </div>
+    <button onclick="suma()">Añadir clase CSS</button>
+    <button onclick="resta()">Eliminar clase CSS</button>
+    <script>
+        let boton = document.getElementById("div")
+        function suma() {
+            boton.classList.add("clase1");
+        }
+        function resta() {
+            boton.classList.remove("clase1");
+        }
+    </script>
+</body>
+
+</html>
+
+<!-- constr ps = dom.qsa ("p") | query selector all, elegimos todos los parrafos del texto.
 parrafos foreach((parrafo)) => {
     const contenido: parrafo.textcontent
-}
+} -->
 
-</body>
-</html>
+
+<p>Añade dos botones que:
+    El primero añadirá una nueva clase CSS a un elemento de su elección y observe los cambios de estilo que se producen.
+    La
+    clase debe existir en el CSS.
+    El segundo, eliminará una clase CSS existente de un elemento y observa cómo esto afecta a la apariencia del
+    elemento.</p>
