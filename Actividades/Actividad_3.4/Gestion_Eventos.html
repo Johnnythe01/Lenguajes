@@ -1,11 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestion de eventos</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+    <p id="div">Buenah! estoy en español, obviamente.</p>
+    <button id="boton1">Boton A</button>
+    <button id="boton2">Boton B</button>
+    <script>
+        let boto = document.getElementById("boton1")
+        let Boolean = true
+
+        boto.addEventListener("click", function () {
+            let div = document.getElementById("div")
+            if (Boolean == true) {
+                div.textContent = "Buenah! estoy en español, obviamente.";
+                Boolean = false
+            } else {
+                div.textContent = "Yoo! I'm in english, obviously.";
+                Boolean = true
+            }
+        });
+
+        let colorBoton = document.getElementById("boton2")
+        colorBoton.addEventListener("mouseover", function () {
+            document.getElementById("boton2").style.backgroundColor = "grey"
+        });
+
+
+
+    </script>
 </body>
+
 </html>
+
+
+
+
+
+
+
+
+<p> Crea dos botones. Esta vez, no utilizaremos "onClick". En su lugar, añadiremos escuchadores de forma programática.
+    El primer botón traducirá el texto de un párrafo específico: sustituirá el contenido por la versión en el otro
+    idioma.
+    Debe funcionar en ambos sentidos. Es decir, si el texto está en el idioma A, lo pasará en el B, y si está en el
+    idioma B, lo pasará en el A.
+    El segundo botón tendrá un escuchador de eventos mouseover. Cuando el cursor pase por encima del elemento, éste debe
+    cambiar de color (esto se puede hacer con CSS. En este caso, utilizaremos JavaScript).</p>
