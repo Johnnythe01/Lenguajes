@@ -50,8 +50,20 @@
 </body>
 <script>
     function changeParagraphBackground() {
-            const paragraphs = document.querySelectorAll("p");
+        const paragraphs = document.querySelectorAll("p");
+
+        paragraphs.forEach(paragraph => {
+            const specificWord = "Berners-Lee";
+
+            if (paragraph.textContent.includes(specificWord)) {
+                paragraph.style.backgroundColor = "green";
             }
+            paragraph.addEventListener("click", function () {
+                alert("Eso es un Párrafo!");
+            });
+        });
+    }
+    changeParagraphBackground();
 </script>
 
 <!-- Con JavaScript, en una página nueva o una copia de una de tu creación:
