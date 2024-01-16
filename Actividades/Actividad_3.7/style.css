@@ -36,14 +36,24 @@ ul {
     padding-right: 20px; 
 }
 
+.cien {
+    width: 100%;
+}
+
 .navigationbar2{
     background-color: #00a2ff;
     display: flex;
+    height: 0px;
     justify-content: space-between;
     padding-right: 20px; 
-    padding-bottom: 200px;
     color: white;
     padding-left: 20px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.visible{
+    height: 100%;
 }
 
 .fondogris {
@@ -297,13 +307,29 @@ footer {
     text-decoration: none;
 }
 
+.MenuPointerCursorHide {
+    color: white;
+}
+
+.MenuPointerCursorHide a {
+    color: white;
+}
+
+.white {
+    color: white;
+}
+
 @media only screen and (min-width: 1024px) {
     .hamburguesa{
         display: none;
     }
+    .MenuPointerCursorHide{
+        display: none;
+        color: white;
+        flex-direction: column;
+    }
+
 }
-
-
 
 @media only screen and (max-width: 1024px) {
     nav {
@@ -313,7 +339,9 @@ footer {
     .hamburguesa{
         background: gray;
     }
-
+    .MenuPointerCursorHide{
+        color: white;
+    }
     .navigationbar::after {
         font-size: 24px;
         color: white;

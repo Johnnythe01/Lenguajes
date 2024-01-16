@@ -9,26 +9,29 @@
 <link rel="stylesheet" href="style.css">
 
 <body>
-    <div class="navigationbar" id="navigationbar">
-        <h1>CIDETech</h1>
-        <nav>
-            <ul>
-                <li><a href="">Inicio</a></li>
-                <li><a href="#c1">Sobre nosotros</a></li>
-                <li><a href="#c2">Servicios</a></li>
-                <li><a href="#c3">Portfolio</a></li>
-                <li><a href="#c4">Contacto</a></li>
-            </ul>
-            <div class="menu pointerCursor hide">
-                <div class="#c0" id="option"0> Opcion 0</div>
-                <div class="#c1" id="option"1> Opcion 1</div>
-                <div class="#c2" id="option"2> Opcion 2</div>
-                <div class="#c3" id="option"3> Opcion 3</div>
-                <div class="#c4" id="option"4> Opcion 4</div>
-            </div>
-        </nav>
-        <input type="search" name="Busca" placeholder=" Buscar" class="inputnav">
-        <button class="hamburguesa" id="hamburguesa">☰</button>
+    <div>
+        <div class="navigationbar cien">
+            <h1>CIDETech</h1>
+            <nav>
+                <ul>
+                    <li><a href="#c0">Inicio</a></li>
+                    <li><a href="#c1">Sobre nosotros</a></li>
+                    <li><a href="#c2">Servicios</a></li>
+                    <li><a href="#c3">Portfolio</a></li>
+                    <li><a href="#c4">Contacto</a></li>
+                </ul>
+
+            </nav>
+            <input type="search" name="Busca" placeholder=" Buscar" class="inputnav">
+            <button class="hamburguesa" id="hamburguesa">☰</button>
+        </div>
+        <div class="cien MenuPointerCursorHide navigationbar2" id="navigationbar">
+            <div id="option0"> <a class="white" href="#c0">Inicio</a></div>
+            <div id="option1"> <a class="white" href="#c1">Sobre nosotros</a></div>
+            <div id="option2"> <a class="white" href="#c2">Servicios</a></div>
+            <div id="option3"> <a class="white" href="#c3">Portfolio</a></div>
+            <div id="option4"> <a class="white" href="#c4">Contacto</a></div>
+        </div>
     </div>
     <div class="fondogris">
         <div class="SobreNosotros contenedor">
@@ -171,4 +174,5 @@
 Con JavaScript, en la página de la actividad 2.20 (o en una copia):
 Añade JavaScript para detectar cuando el botón del menú hamburguesa es pulsado.
 Cuando se pulse el botón, el menú de navegación debe desplegarse si está oculto, o esconderse si ya está visible.
-Añade también funcionalidad para que, cuando se clique cualquier enlace del menú o se vuelva a pulsar el botón hamburguesa, el menú se vuelva a ocultar.
+Añade también funcionalidad para que, cuando se clique cualquier enlace del menú o se vuelva a pulsar el botón
+hamburguesa, el menú se vuelva a ocultar.
