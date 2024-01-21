@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tareas</title>
+</head>
+<link rel="stylesheet" href="style.css">
+
+<body>
+
+    <h1>Lista de Tareas</h1>
+
+    <div class="principal">
+        <input type="text" id="taskInput">
+        <button onclick="addTask()">Añadir tarea</button>
+    </div>
+
+    <ul id="taskList"></ul>
+
+    <div class="tareas">
+        <button onclick="filterTasks('all')">Mostrar todas</button>
+        <button onclick="filterTasks('active')">Mostrar activas(incompletas)</button>
+        <button onclick="filterTasks('completed')">Mostrar completadas</button>
+        <button onclick="clearCompleted()">Eliminar completadas</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
