@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Mi blog bien loko</h1>
+    <p>Mis párrafos irán aqui.</p>
+    <p>Aquí ira otro párrafo bien reshulon.</p>
+    <p>Voy terminando que 3 ya es multitud.</p>
+</body>
+<div id="comments-section">
+    <form id="add-comment-form">
+        <label for="comment-text">Nuevo Comentario:</label>
+        <input type="text" id="comment-text" required>
+        <button type="submit">Enviar Comentario</button>
+    </form>
+    
+    <div id="comments-container">
+        
+    </div>
+</div>
+<button id="toggle-comments">Mostrar/Ocultar Comentarios</button>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"> </script>
+<script>
+$(document).ready(function () {
+    $("#toggle-comments").click(function () {
+      $("p").toggle();
+    });
+  });
+  </script>
+</html>
