@@ -13,25 +13,27 @@
     <p>Mis párrafos irán aqui.</p>
     <p>Aquí ira otro párrafo bien reshulon.</p>
     <p>Voy terminando que 3 ya es multitud.</p>
-</body>
-<div id="comments-section">
-    <form id="add-comment-form">
-        <label for="comment-text">Nuevo Comentario:</label>
-        <input type="text" id="comment-text" required>
-        <button type="submit">Enviar Comentario</button>
-    </form>
-    
-    <div id="comments-container">
-        
-    </div>
+
+    <div id="comments-section">
+        <form id="add-comment-form">
+            <label for="comment-text">Nuevo Comentario:</label>
+            <input type="text" id="comment-text" required>
+            <button type="submit" value="enviar">Enviar Comentario</button>
+            <button type="reset" value="Borrar"> Eliminar Comentario</button>
+        </form>
+
+        <div id="comments-container"></div>
 </div>
+</body>
 <button id="toggle-comments">Mostrar/Ocultar Comentarios</button>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"> </script>
 <script>
-$(document).ready(function () {
-    $("#toggle-comments").click(function () {
-      $("p").toggle();
+    $(document).onclick(function () {
+        $("#toggle-comments").click(function () {
+            $("#comments-container").toggle();
+        });
+        
     });
-  });
-  </script>
+</script>
+
 </html>
