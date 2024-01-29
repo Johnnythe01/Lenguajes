@@ -15,25 +15,37 @@
     <p>Voy terminando que 3 ya es multitud.</p>
 
     <div id="comments-section">
-        <form id="add-comment-form">
-            <label for="comment-text">Nuevo Comentario:</label>
-            <input type="text" id="comment-text" required>
-            <button type="submit" value="enviar">Enviar Comentario</button>
-            <button type="reset" value="Borrar"> Eliminar Comentario</button>
-        </form>
+        <label for="comment-text">Nuevo Comentario:</label>
+        <input type="text" id="comment-text" required>
+        <button id="enviar">Enviar Comentario</button>
+        <button id="eliminar"> Eliminar Comentario</button>
 
         <div id="comments-container"></div>
-</div>
+    </div>
 </body>
 <button id="toggle-comments">Mostrar/Ocultar Comentarios</button>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"> </script>
 <script>
-    $(document).onclick(function () {
+    $(function toggleinformation() {
         $("#toggle-comments").click(function () {
             $("#comments-container").toggle();
         });
-        
     });
+    $(function addcomment() {
+        $("#enviar").click(function () {
+            var commentText = $("#comment-text").val();
+            var newComment = "<p class='parrafo'>" + commentText + "</p>";
+            $("#comments-container").append(newComment);
+            
+        })
+    })
+    $(function removecomment() {
+        $("#eliminar").click (function () {
+            var parrafo = document.getElementsByClassName("parrafo")
+            console.log(parrafo);
+            $("#comments-container").remove(parrafo[0]);
+        })
+    })
 </script>
 
 </html>
