@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>jQuery 1</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 
 <body>
@@ -34,18 +35,14 @@
     $(function addcomment() {
         $("#enviar").click(function () {
             var commentText = $("#comment-text").val();
-            var newComment = "<p class='parrafo'>" + commentText + "</p>";
+            var newComment = "<div class='comment'><p class='parrafo'>" + commentText + "</p><button class='eliminar-comentario'>Eliminar</button></div>";
             $("#comments-container").append(newComment);
-            
+            $("#comment-text").val("");
         })
     })
-    $(function removecomment() {
-        $("#eliminar").click (function () {
-            var parrafo = document.getElementsByClassName("parrafo")
-            console.log(parrafo);
-            $("#comments-container").remove(parrafo[0]);
+    $(document).on("click", ".eliminar-comentario", function() {
+                $(this).parent('.comment').remove();
         })
-    })
 </script>
 
 </html>
