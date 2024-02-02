@@ -5,6 +5,9 @@ function todobutton() {
     const [cont, setCont] = React.useState(0);
     const [palabra, setPlabra] = React.useState ("hola");
 
+    function addTask() {
+    setTasks((currentTasks) => [...currentTasks, "Nueva tarea"])
+    }
     function click () {
         setCont(prevCont => prevCont + 1);
         //setCont(cont + 1)
@@ -19,3 +22,6 @@ return (
 
 }
 export default TodoButton;
+function setTasks(arg0: (currentTasks: any) => any[]) {
+    throw new Error("Function not implemented.");
+}
