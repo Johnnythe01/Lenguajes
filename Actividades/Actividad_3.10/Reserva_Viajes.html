@@ -1,30 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Reserva tu Viaje!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 </head>
+
 <body>
-    
+
+    <header>
+        <h2>Agencia Montserrat</h2>
+        <p>Pasión por los altos vuelos desde 1965</p>
+    </header>
+
+    <div>
+        <nav>
+            <h2>Menú de navegación</h2>
+            <a href="">Inicio</a><br>
+            <a href="">Catálogo de viajes</a><br>
+            <a href="">Viajes express</a><br>
+            <a href="">Contacto</a>
+        </nav>
+
+        <main>
+            <h1>Reserva tu viaje</h1>
+
+            <div id="selector-fecha">
+                <label for="fecha_ida">Fecha de ida:</label>
+                <input type="text" id="fecha_ida" name="fecha_ida">
+                
+                <label for="fecha_vuelta">Fecha de vuelta:</label>
+                <input type="text" id="fecha_vuelta" name="fecha_vuelta">
+            </div>
+
+            <label for="destino">Destino:</label>
+            <input type="text" id="destino" name="destino">
+
+            <div id="slider"></div>
+            <div id="slider-cantidad">Presupuesto: $100 - $1000</div>
+
+            <h1>Catálogo de viajes</h1>
+            <div class="producto">
+                <img src="bridgeleading sea.jpg" width="140 px" height="180px">
+                <h3>Visita Noruega y enfráscate en sus fiordos.</h3>
+                <p>Zona: Noruega</p>
+                <p>Desde: 289€</p>
+                <a href="">Más información</a>
+            </div>
+
+            <div class="producto">
+                <img src="darksouls best.jpg" width="140 px" height="180px">
+                <h3>El maravilloso valle Boreal de Irithyll te abre sus brazos, para que o bien continúes con la llama,
+                    o destrúyas el universo.</h3>
+                <p>Zona: Irithyll</p>
+                <p>Desde: 649€</p>
+                <a href="">Más información</a>
+            </div>
+
+            <div class="producto">
+                <img src="Fujiyoshida-Japan.jpg" width="140 px" height="180px">
+                <h3>Visita Japón y disfruta de sus cerezos en flor.</h3>
+                <p>Zona: Japon</p>
+                <p>Desde: 1.300€</p>
+                <a href="">Más información</a>
+            </div>
+
+            <div class="producto">
+                <img src="lotr.jpg" width="140 px" height="180px">
+                <h3>Alguna vez viste el señor de los anillos? Es tu oportunidad de cumplir tu sueño.</h3>
+                <p>Zona: Argonath</p>
+                <p>Desde: 1.999€</p>
+                <a href="">Más información</a>
+            </div>
+
+            <div class="producto">
+                <img src="palm trees beach.jpg" width="140 px" height="180px">
+                <h3>Si lo tuyo es más un retiro sencillo y relajado con el clima ideal, Hawaii es tu destino.</h3>
+                <p>Zona: Hawaii</p>
+                <p>Desde: 799€</p>
+                <a href="">Más información</a>
+            </div>
+
+            <div class="producto">
+                <img src="wow 1.jpg" width="140 px" height="180px">
+                <h3>Ah... Pandaria, más concretamente sus acantilados en la Cima Kun-lai, viaje bajo su propio riesgo y
+                    tenga cuidado del Sha de la Ira.</h3>
+                <p>Zona: Pandaria</p>
+                <p>Desde: 1.400€</p>
+                <a href="">Más información</a>
+            </div>
+
+            <div class="producto">
+                <img src="WoW_Summit.jpg" width="140 px" height="180px">
+                <h3>Si ya has cumplido en la tierra, es hora de ascender, libera tu cuerpo mortal y viaja al paraíso.
+                </h3>
+                <p>Zona: Cielo</p>
+                <p>Desde: 0€</p>
+                <a href="">Más información</a>
+            </div>
+
+            <div class="producto">
+                <img src="niceview1.jpg" width="140 px" height="180px">
+                <h3>USA, la región de Los Grandes Lagos, Michigan/Canada, visita este hermoso paraje.</h3>
+                <p>Zona: Canada</p>
+                <p>Desde: 1.230€</p>
+                <a href="">Más información</a>
+            </div>
+
+            <div class="producto">
+                <img src="niceview2.jpg" width="140 px" height="180px">
+                <h3>Una vez más volvemos al norte a visitar sus localizaciones más coloridas, extraídas de un
+                    cuento fantástico.</h3>
+                <p>Zona: Suecia</p>
+                <p>Desde: 384€</p>
+                <a href="">Más información</a>
+            </div>
+
+            <div class="producto">
+                <img src="celestial view.jpg" width="140 px" height="180px">
+                <h3>Cansado de este planeta? lógico, quién sabe cuanto más nos queda aquí? Keppler 22b es una gran
+                    opción</h3>
+                <p>Zona: Keppler 22b</p>
+                <p>Desde: 2.000€</p>
+                <a href="">Más información</a>
+            </div>
+        </main>
+    </div>
+    <footer>© 2024 Agencia Montserrat. Todos los derechos reservados.</footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#slider").slider({
+                range: true,
+                min: 0,
+                max: 2000,
+                values: [100, 1000],
+                slide: function (event, ui) {
+                    $("#slider-cantidad").text("Presupuesto: $" + ui.values[0] + " - $" + ui.values[1]);
+                }
+            });
+        });
+        $(document).ready(function () {
+            $("#fecha_ida").datepicker({
+                dateFormat: "dd/mm/yy",
+                minDate: 0,
+                onSelect: function (selectedDate) {
+                    $("#fecha_vuelta").datepicker("option", "minDate", selectedDate);
+                }
+            });
+            $("#fecha_vuelta").datepicker({
+                dateFormat: "dd/mm/yy",
+                minDate: 0,
+            });
+        });
+        $(document).ready(function () {
+            var destinosDisponibles = [
+                "Noruega", "Irithyll", "Japon", "Argonath", "Hawaii", "Pandaria", "Cielo", "Canada", "Suecia", "Keppler 22b"
+            ];
+            $("#destino").autocomplete({
+                source: destinosDisponibles
+            });
+        });
+    </script>
 </body>
+
 </html>
 
 
-
-
-
-<!-- Crear una Aplicación de Reserva de Viajes
-
-En esta actividad, crearemos una página web de reserva de viajes con una interfaz de usuario rica, que incluya un selector de fechas, sugerencias de destinos y un control deslizante de presupuesto.
-
-Instrucciones
-
-Diseño de la Aplicación:
-La aplicación permitirá a los usuarios seleccionar fechas de viaje, elegir un destino de una lista y ajustar opciones tales como el presupuesto.
+<!--
 Implementación de Widgets:
 Datepicker: integra un Datepicker para seleccionar la fecha de inicio y fin del viaje.
-Autocompleto: Utilice el widget de autocompletar para sugerir destinos mientras el usuario escribe.
-Slider: Implementa un Slider para ajustar el rango de presupuesto para el viaje.
-Personalización y Funcionalidad:
-Asegúrese de que los widgets interactúen entre sí. Por ejemplo, el rango de fechas no debe permitir fechas pasadas y el presupuesto máximo podría cambiar según el destino seleccionado. -->

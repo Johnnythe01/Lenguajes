@@ -1,7 +1,16 @@
-let nuevoElemento = document.getElementById("addTask");{
+function addTask() {
+    const texto = document.getElementById("texto").value.trim();
+    const nuevaTarea = document.createElement("li");
 
-        }
+    nuevaTarea.textContent = texto;
 
-        function eliminarElemento() {
-            document.body.removeChild(nuevoElemento);
-        }
+    const botonEliminar = document.createElement("button");
+
+    botonEliminar.textContent = "Eliminar";
+    botonEliminar.onclick = () => nuevaTarea.remove();
+
+    nuevaTarea.appendChild(botonEliminar);
+
+    document.getElementById("list").appendChild(nuevaTarea);
+    document.getElementById("texto").value = "";
+}

@@ -13,18 +13,11 @@
     <h1>Lista de Tareas</h1>
 
     <div class="principal">
-        <input type="text" id="taskInput">
+        <input type="text" id="texto" placeholder="Nueva tarea">
         <button onclick="addTask()">Añadir tarea</button>
     </div>
 
-    <ul id="taskList"></ul>
-
-    <div class="tareas">
-        <button onclick="filterTasks('all')">Mostrar todas</button>
-        <button onclick="filterTasks('active')">Mostrar activas(incompletas)</button>
-        <button onclick="filterTasks('completed')">Mostrar completadas</button>
-        <button onclick="clearCompleted()">Eliminar completadas</button>
-    </div>
+    <ul id="list"></ul>
 
     <script src="app.js"></script>
 </body>
