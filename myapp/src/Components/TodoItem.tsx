@@ -1,10 +1,14 @@
 import React from "react";
 import {Button} from "react-bootstrap";
-// import aqui css especifico
+function TodoItem({ content, deleteTask }: { content: string, deleteTask: (elemento:string) => void }) {
 
-function TodoItem({ content }) { content: String } {
-    return ( <li>{content}</li>);
 
+    return (
+        <div className="liContenedor">
+         <li>{content}</li>
+         <i className="borrar" onClick={() => deleteTask(content)}>X</i>
+         </div>
+    );
 }
 
 export default TodoItem;

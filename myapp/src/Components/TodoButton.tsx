@@ -1,6 +1,6 @@
 import React from "react";
 
-function todobutton() {
+function TodoButton() {
     //estado ->contador
     const [cont, setCont] = React.useState(0);
     const [palabra, setPlabra] = React.useState ("hola");
