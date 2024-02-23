@@ -7,9 +7,12 @@ function App() {
   return (
     <div className="App">
       <h1>Lista de la compra TSX</h1>
-      <Table/>
+      <Table />
     </div>
   );
+  <div>
+    
+  </div>
 }
 
 export default App;
