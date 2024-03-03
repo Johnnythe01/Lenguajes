@@ -15,10 +15,19 @@ function Table() {
                     <th>Comprado</th>
                     <th>Imagen</th>
                 </tr>
-                map {
-                    <Row filas={filas}/>
-                    
-                }
+                {filas.map((fila, index) => (
+                    <tr key={index}>
+                        <td>{fila.producto}</td>
+                        <td>{fila.cantidad}</td>
+                        <td>{fila.precio}</td>
+                        <td>{fila.tienda}</td>
+                        <td>{fila.notas}</td>
+                        <td>{fila.comprado ? "Sí" : "No"}</td>
+                        <td>
+                            <img src={fila.imagen} alt={fila.producto} style={{ maxWidth: '100px' }} />
+                        </td>
+                    </tr>
+                ))}
             </thead>
             <tbody>
 

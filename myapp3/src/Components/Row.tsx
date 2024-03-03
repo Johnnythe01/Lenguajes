@@ -1,24 +1,4 @@
 import React from "react";
-<<<<<<< HEAD
-import { filas } from "./lista";
-
-
-function Row({ filas }) {
-    return (
-        <tr>
-            <td>{filas.producto}</td>
-            <td>{filas.cantidad}</td>
-            <td>{filas.precio}</td>
-            <td>{filas.tienda}</td>
-            <td>{filas.notas}</td>
-            <td>{filas.comprado}</td>
-            <td>{filas.imagen}</td>
-        </tr>
-    )
-}
-
-export default Row;
-=======
 
 interface RowProps {
     producto: string;
@@ -29,6 +9,7 @@ interface RowProps {
     comprado: boolean;
     imagen: string;
 }
+
 const Row: React.FC<RowProps> = ({
     producto,
     cantidad,
@@ -54,4 +35,3 @@ const Row: React.FC<RowProps> = ({
 }
 
 export default Row;
->>>>>>> 35aa2fa10a65091ed92345c95ae2972b9ec1bae1
