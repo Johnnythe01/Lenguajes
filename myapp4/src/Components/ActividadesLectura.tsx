@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ActividadesLectura: React.FC = () => {
+function ActividadesLectura () {
   return (
     <div>
       <h1>Zona de Lectores</h1>
@@ -9,4 +9,4 @@ const ActividadesLectura: React.FC = () => {
   );
 }
 
-export default PuntosDeInteres;
+export default ActividadesLectura;

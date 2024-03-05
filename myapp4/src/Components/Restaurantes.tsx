@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Restaurantes: React.FC = () => {
+function Restaurantes () {
   return (
     <div>
       <h1>Restaurantes</h1>

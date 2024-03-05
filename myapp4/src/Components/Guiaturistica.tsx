@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Guiaturistica: React.FC = () => {
+function Guiaturistica () {
   return (
     <div>
       <h1>Guía turística</h1>
