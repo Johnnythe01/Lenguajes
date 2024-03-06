@@ -1,27 +1,19 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route,} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Navbar from './components/Navbar';
-import Inicio from './components/Inicio';
-import PuntosDeInteres from './components/PuntosDeInteres';
-import Restaurantes from './components/Restaurantes';
-import Hoteles from './components/Hoteles';
-import ActividadesDeOcio from './components/ActividadesDeOcio';
+import Navbar from './Components/Navbar';
+import Inicio from './Components/Inicio';
+import PuntosDeInteres from './Components/PuntosInteres';
+import Restaurantes from './Components/Restaurantes';
+import Hoteles from './Components/Hoteles';
+import ActividadesDeOcio from './Components/ActividadesOcio';
 
-const App: React.FC = () => {
+ function App () {
   return (
-    <Router>
-      <div>
+    <div classname="App">
+      <h1>Guia turistica</h1>
         <Navbar />
-        <Switch>
-          <Route exact path="/" component={Inicio} />
-          <Route path="/puntos-de-interes" component={PuntosDeInteres} />
-          <Route path="/restaurantes" component={Restaurantes} />
-          <Route path="/hoteles" component={Hoteles} />
-          <Route path="/actividades-de-ocio" component={ActividadesDeOcio} />
-        </Switch>
       </div>
-    </Router>
   );
 }
 
