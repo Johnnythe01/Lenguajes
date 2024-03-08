@@ -1,19 +1,23 @@
 import React from 'react';
-import { BrowserRouter as Router, Route,} from 'react-router-dom';
+import { BrowserRouter as Router, Route, BrowserRouter, Routes, } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Navbar from './Components/Navbar';
-import Inicio from './Components/Inicio';
-import PuntosDeInteres from './Components/PuntosInteres';
-import Restaurantes from './Components/Restaurantes';
-import Hoteles from './Components/Hoteles';
-import ActividadesDeOcio from './Components/ActividadesOcio';
+import Navbar from './components/NavBar';
+import Inicio from './pages/Inicio';
+import PuntosDeInteres from './pages/PuntosInteres';
+import Restaurantes from './components/Restaurantes';
+import Hoteles from './components/Hoteles';
+import ActividadesDeOcio from './components/ActividadesOcio';
 
- function App () {
+function App() {
   return (
-    <div classname="App">
-      <h1>Guia turistica</h1>
-        <Navbar />
-      </div>
+    <BrowserRouter>
+      {/* <h1>Guia turistica</h1> */}
+      <Navbar />
+      <Routes>
+        <Route index Component={Inicio}/>
+        <Route path="puntos-de-interes"Component={PuntosDeInteres}/>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

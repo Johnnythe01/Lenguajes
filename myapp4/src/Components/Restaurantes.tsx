@@ -1,4 +1,5 @@
 import React from 'react';
+// import { ListaRestaurantes } from './ListaRestaurantes';
 
 function Restaurantes () {
   return (
