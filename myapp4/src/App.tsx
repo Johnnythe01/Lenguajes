@@ -1,12 +1,12 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, BrowserRouter, Routes, } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Navbar from './components/NavBar';
+import Navbar from './pages/NavBar';
 import Inicio from './pages/Inicio';
 import PuntosDeInteres from './pages/PuntosInteres';
-import Restaurantes from './components/Restaurantes';
-import Hoteles from './components/Hoteles';
-import ActividadesDeOcio from './components/ActividadesOcio';
+import Restaurantes from './pages/Restaurantes';
+import Hoteles from './pages/Hoteles';
+import ActividadesDeOcio from './pages/ActividadesOcio';
 
 function App() {
   return (
