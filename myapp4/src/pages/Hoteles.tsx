@@ -1,5 +1,5 @@
 import React from 'react';
-import { ListaHoteles } from './Datos/ListaHoteles';
+//import { ListaHoteles } from './datos/ListaHoteles';
 
 function Hoteles () {
   return (

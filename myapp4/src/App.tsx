@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, BrowserRouter, Routes, } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './pages/NavBar';
 import Inicio from './pages/Inicio';
@@ -16,6 +16,9 @@ function App() {
       <Routes>
         <Route index Component={Inicio}/>
         <Route path="puntos-de-interes"Component={PuntosDeInteres}/>
+        <Route path="restaurantes"Component={Restaurantes}/>
+        <Route path="hoteles"Component={Hoteles}/>
+        <Route path="actividades-de-ocio"Component={ActividadesDeOcio}/>
       </Routes>
     </BrowserRouter>
   );

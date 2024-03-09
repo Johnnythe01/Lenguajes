@@ -1,14 +1,16 @@
 import Carousel from 'react-bootstrap/Carousel';
 import SpidyBlack from "./Spidyblack.jpg";
+import MegamanX from "./MegamanX.jpg";
+import MONSTERS from "./MONSTERS.png"
 
 function Carrusel() {
   return (
     <Carousel>
-      <Carousel.Item>
+      <Carousel.Item className="d-flex justify-content-center align-items-center">
         <img
-          className="d-block w-100"
           src={SpidyBlack}
           alt="First slide"
+          style={{width: '500px', height: '700px'}}
         />
         <Carousel.Caption>
           <h3>First slide label</h3>
