@@ -1,6 +1,7 @@
 import React from 'react';
 import Carrusel from '../components/Carrusel';
-// import { ListaPuntosInteres } from './ListaPuntosInteres';
+import { Col, Row } from "react-bootstrap";
+import { ListaPuntosInteres } from '../datos/ListaPuntosInteres';
 
 function PuntosDeInteres () {
   return (

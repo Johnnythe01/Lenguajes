@@ -1,6 +1,6 @@
 import img from "./Spidyblack.jpg"
-export const ListaPuntosInteres = [
-    {
+export const ListaOcio = [
+{
     Actividad1: "Escalada",
     calle: 1,
     precio: 20,
@@ -28,4 +28,5 @@ export const ListaPuntosInteres = [
     disponible: true,
     imagen: img,
 },
+
 ]

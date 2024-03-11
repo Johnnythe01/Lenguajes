@@ -1,5 +1,6 @@
 import React from 'react';
-// import { ListaRestaurantes } from './ListaRestaurantes';
+import { Col, Row } from "react-bootstrap";
+import { ListaRestaurantes } from '../datos/ListaRestaurantes';
 
 function Restaurantes () {
   return (

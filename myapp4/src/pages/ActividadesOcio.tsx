@@ -1,4 +1,6 @@
 import React from 'react';
+import { Col, Row } from "react-bootstrap";
+import { ListaOcio } from '../datos/ListaOcio';
 
 function ActividadesLectura () {
   return (

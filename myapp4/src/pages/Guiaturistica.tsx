@@ -1,5 +1,6 @@
 import React from 'react';
-// import { ListaOcio } from './ListaOcio';
+import { Col, Row } from "react-bootstrap";
+import { ListaPuntosInteres } from '../datos/ListaPuntosInteres';
 
 function Guiaturistica () {
   return (
