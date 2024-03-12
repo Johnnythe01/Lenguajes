@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "https://johnnythe01.github.io/Lenguajes/myapp4/build/static/css/main.ff02f4b5.css",
+    "main.js": "https://johnnythe01.github.io/Lenguajes/myapp4/build/static/js/main.92b3031b.js",
+    "static/js/453.f4fc6863.chunk.js": "https://johnnythe01.github.io/Lenguajes/myapp4/build/static/js/453.f4fc6863.chunk.js",
+    "static/media/f1.jpg": "https://johnnythe01.github.io/Lenguajes/myapp4/build/static/media/f1.0ad6dae550b992089b8a.jpg",
+    "static/media/paisaje1.jpg": "https://johnnythe01.github.io/Lenguajes/myapp4/build/static/media/paisaje1.7730cedcf5c33b1f5fdf.jpg",
+    "static/media/paisaje2.jpg": "https://johnnythe01.github.io/Lenguajes/myapp4/build/static/media/paisaje2.dc9b973e0d877aba28f3.jpg",
+    "static/media/castillo.jpg": "https://johnnythe01.github.io/Lenguajes/myapp4/build/static/media/castillo.194cc79d24c0ed197285.jpg",
+    "static/media/parapente.jpeg": "https://johnnythe01.github.io/Lenguajes/myapp4/build/static/media/parapente.cc0ffbea7da2b8dc4749.jpeg",
+    "static/media/japanese.jpg": "https://johnnythe01.github.io/Lenguajes/myapp4/build/static/media/japanese.755cbffa661a5a4edaf7.jpg",
+    "static/media/paisaje3.jpg": "https://johnnythe01.github.io/Lenguajes/myapp4/build/static/media/paisaje3.e9b8af8d52d1ac842622.jpg",
+    "static/media/MONSTERS.png": "https://johnnythe01.github.io/Lenguajes/myapp4/build/static/media/MONSTERS.7fa6a18796b7989bfa10.png",
+    "static/media/templo.jpeg": "https://johnnythe01.github.io/Lenguajes/myapp4/build/static/media/templo.9d0f872165c03920297f.jpeg",
+    "static/media/mountainbike.jpeg": "https://johnnythe01.github.io/Lenguajes/myapp4/build/static/media/mountainbike.994553cdb157166751b2.jpeg",
+    "static/media/crash.jpg": "https://johnnythe01.github.io/Lenguajes/myapp4/build/static/media/crash.0fd74daed5e98dfcad26.jpg",
+    "static/media/italian.jpg": "https://johnnythe01.github.io/Lenguajes/myapp4/build/static/media/italian.a1d83042195b88f63912.jpg",
+    "static/media/mexican.jpg": "https://johnnythe01.github.io/Lenguajes/myapp4/build/static/media/mexican.bfbf54094660d9f62535.jpg",
+    "static/media/MegamanX.jpg": "https://johnnythe01.github.io/Lenguajes/myapp4/build/static/media/MegamanX.12681476517cb3e744c4.jpg",
+    "static/media/buceo.jpg": "https://johnnythe01.github.io/Lenguajes/myapp4/build/static/media/buceo.8f16af55f58c2a6c275c.jpg",
+    "static/media/Spidyblack.jpg": "https://johnnythe01.github.io/Lenguajes/myapp4/build/static/media/Spidyblack.1228800f15f7221944a2.jpg",
+    "static/media/apu.jpg": "https://johnnythe01.github.io/Lenguajes/myapp4/build/static/media/apu.82d67cc9c50bf9b2319b.jpg",
+    "static/media/escalada.jpg": "https://johnnythe01.github.io/Lenguajes/myapp4/build/static/media/escalada.2bb4e4a1cd66432802b1.jpg",
+    "index.html": "https://johnnythe01.github.io/Lenguajes/myapp4/build/index.html",
+    "main.ff02f4b5.css.map": "https://johnnythe01.github.io/Lenguajes/myapp4/build/static/css/main.ff02f4b5.css.map",
+    "main.92b3031b.js.map": "https://johnnythe01.github.io/Lenguajes/myapp4/build/static/js/main.92b3031b.js.map",
+    "453.f4fc6863.chunk.js.map": "https://johnnythe01.github.io/Lenguajes/myapp4/build/static/js/453.f4fc6863.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ff02f4b5.css",
+    "static/js/main.92b3031b.js"
+  ]
+}
