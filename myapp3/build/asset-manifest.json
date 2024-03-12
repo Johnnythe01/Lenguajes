@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.f855e6bc.css",
-    "main.js": "/static/js/main.f21341a6.js",
-    "static/js/453.486c055a.chunk.js": "/static/js/453.486c055a.chunk.js",
-    "static/media/manzana.jpg": "/static/media/manzana.213aeda665c76645846f.jpg",
-    "static/media/actimel.jpg": "/static/media/actimel.a32e988e3fd5cf318d21.jpg",
-    "static/media/chocolate.jpg": "/static/media/chocolate.75841d5e780154392a7e.jpg",
-    "static/media/champu.jpg": "/static/media/champu.3d63892fbe7977507e3f.jpg",
-    "index.html": "/index.html",
-    "main.f855e6bc.css.map": "/static/css/main.f855e6bc.css.map",
-    "main.f21341a6.js.map": "/static/js/main.f21341a6.js.map",
-    "453.486c055a.chunk.js.map": "/static/js/453.486c055a.chunk.js.map"
+    "main.css": "https://johnnythe01.github.io/Lenguajes/myapp3/build/static/css/main.f855e6bc.css",
+    "main.js": "https://johnnythe01.github.io/Lenguajes/myapp3/build/static/js/main.08487528.js",
+    "static/js/453.486c055a.chunk.js": "https://johnnythe01.github.io/Lenguajes/myapp3/build/static/js/453.486c055a.chunk.js",
+    "static/media/manzana.jpg": "https://johnnythe01.github.io/Lenguajes/myapp3/build/static/media/manzana.213aeda665c76645846f.jpg",
+    "static/media/actimel.jpg": "https://johnnythe01.github.io/Lenguajes/myapp3/build/static/media/actimel.a32e988e3fd5cf318d21.jpg",
+    "static/media/chocolate.jpg": "https://johnnythe01.github.io/Lenguajes/myapp3/build/static/media/chocolate.75841d5e780154392a7e.jpg",
+    "static/media/champu.jpg": "https://johnnythe01.github.io/Lenguajes/myapp3/build/static/media/champu.3d63892fbe7977507e3f.jpg",
+    "index.html": "https://johnnythe01.github.io/Lenguajes/myapp3/build/index.html",
+    "main.f855e6bc.css.map": "https://johnnythe01.github.io/Lenguajes/myapp3/build/static/css/main.f855e6bc.css.map",
+    "main.08487528.js.map": "https://johnnythe01.github.io/Lenguajes/myapp3/build/static/js/main.08487528.js.map",
+    "453.486c055a.chunk.js.map": "https://johnnythe01.github.io/Lenguajes/myapp3/build/static/js/453.486c055a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f855e6bc.css",
-    "static/js/main.f21341a6.js"
+    "static/js/main.08487528.js"
   ]
 }
