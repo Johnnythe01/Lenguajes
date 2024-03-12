@@ -1,7 +1,7 @@
 import Carousel from 'react-bootstrap/Carousel';
-import SpidyBlack from "./Spidyblack.jpg";
-import MegamanX from "./MegamanX.jpg";
-import MONSTERS from "./MONSTERS.png"
+import paisaje1 from "./paisaje1.jpg";
+import paisaje2 from "./paisaje2.jpg";
+import paisaje3 from "./paisaje3.jpg"
 import { Container } from 'react-bootstrap';
 
 function Carrusel() {
@@ -10,40 +10,38 @@ function Carrusel() {
           <Carousel className='mx-5'>
             <Carousel.Item>
               <img
-                src={SpidyBlack}
+                src={paisaje1}
                 alt="First slide"
                 className="d-block w-100"
                 style={{ width: '500px', height: '700px' }}
               />
               <Carousel.Caption>
-                <h3>First slide label</h3>
-                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                <h3>La naturaleza está llamando.</h3>
+                <p>Explora el entorno que te rodea, conoce grandes lagos, increibles parajes.</p>
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
               <img
-                src={MegamanX}
+                src={paisaje2}
                 alt="First slide"
                 className="d-block w-100"
                 style={{ width: '500px', height: '700px' }}
               />
               <Carousel.Caption>
-                <h3>Second slide label</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <h3>Infinitas posibilidades</h3>
+                <p>Este texto apenas se ve, HeHeHe</p>
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
               <img
-                src={MONSTERS}
+                src={paisaje3}
                 alt="First slide"
                 className="d-block w-100"
                 style={{ width: '500px', height: '700px' }}
               />
               <Carousel.Caption>
-                <h3>Third slide label</h3>
-                <p>
-                  Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-                </p>
+                <h3>Que bonito verdad?</h3>
+                <p>En tu reflejo está la respuesta.</p>
               </Carousel.Caption>
             </Carousel.Item>
           </Carousel>

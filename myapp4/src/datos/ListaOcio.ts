@@ -1,32 +1,37 @@
-import img from "./Spidyblack.jpg"
+import img from "../components/Spidyblack.jpg"
+import img2 from "../components/parapente.jpeg"
+import img3 from "../components/escalada.jpg"
+import img4 from "../components/mountainbike.jpeg"
+import img5 from "../components/buceo.jpg"
+
 export const ListaOcio = [
 {
-    Actividad1: "Escalada",
-    calle: 1,
+    Actividad: "Escalada",
+    calle: "Tramuntana",
     precio: 20,
     disponible: true,
-    imagen: img,
+    imagen: img3,
 },
 {
-    Actividad2: "Parapente",
-    calle: 8,
+    Actividad: "Parapente",
+    calle: "Acantilados",
     precio: 150,
-    disponible: true,
-    imagen: img,
-},
-{
-    Actividad3: "Mountain Bike",
-    calle: 13,
-    precio: 30,
     disponible: false,
-    imagen: img,
+    imagen: img2,
 },
 {
-    Actividad4: "Buceo",
-    calle: 90,
+    Actividad: "Mountain Bike",
+    calle: "Tramuntana",
+    precio: 30,
+    disponible: true,
+    imagen: img4,
+},
+{
+    Actividad: "Buceo",
+    calle: "Mar Egeo",
     precio: 550,
     disponible: true,
-    imagen: img,
+    imagen: img5,
 },
 
 ]

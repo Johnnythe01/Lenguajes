@@ -1,31 +1,35 @@
-import img from "./Spidyblack.jpg"
+import img from "../components/Spidyblack.jpg"
+import img2 from "../components/MegamanX.jpg"
+import img3 from "../components/MONSTERS.png"
+import img4 from "../components/crash.jpg"
+
 export const ListaHoteles = [ 
     {
-    Hotel: "Hotel1",
-    calle: 1,
+    Hotel: "Spidy",
+    calle: "Casi Palma",
     precio: 200,
     disponible: true,
     imagen: img,
 },
 {
-    Hotel: "Hotel2",
-    calle: 8,
+    Hotel: "X",
+    calle: "La Palma",
     precio: 100,
     disponible: true,
-    imagen: img,
+    imagen: img2,
 },
 {
-    Hotel: "Hotel3",
-    calle: 13,
+    Hotel: "Monster",
+    calle: "La Palmó",
     precio: 300,
     disponible: false,
-    imagen: img,
+    imagen: img3,
 },
 {
-    Hotel: "Hotel4",
-    calle: 4,
+    Hotel: "Crash",
+    calle: "Bien Palmada",
     precio: 550,
     disponible: true,
-    imagen: img,
+    imagen: img4,
 },
 ]

@@ -4,13 +4,18 @@ import { ListaHoteles } from '../datos/ListaHoteles';
 
 function Hoteles() {
   return (
-    <div>
-      <h1>Hoteles</h1>
-      <p>Los hoteles más importantes y con las mejores ubicaciones de la zona.</p>
-      
-      <p>Disponible: {filas.disponible ? "Sí" : "No"}</p>
-      <p className="card-text"> {filas.precio}</p>
-    </div>
+    <Row>
+      {ListaHoteles.map((filas, indice) =>
+        <Col>
+          <div className='text-center'>
+            <img src={filas.imagen} style={{ height: '330px', width: '330px' }} />
+            <h1>{filas.Hotel}</h1>
+            <p>Ubicación: {filas.calle}</p>
+            <p>Precio: {filas.precio}</p>
+            <p>Disponible: {filas.disponible ? "Si" : "No"}</p>
+          </div>
+        </Col>)}
+    </Row>
   );
 }
 

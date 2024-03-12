@@ -1,31 +1,35 @@
-import img from "./Spidyblack.jpg"
+import img from "../components/paisaje2.jpg"
+import img2 from "../components/templo.jpeg"
+import img3 from "../components/f1.jpg"
+import img4 from "../components/castillo.jpg"
+
 export const ListaPuntosInteres = [
     {
-    Zona1: "Cascadas",
-    calle: 1,
+    Zona: "Cascadas",
+    calle: "Ciudad Maravilla",
     precio: 20,
     disponible: true,
     imagen: img,
 },
 {
-    Hotel: "Templo",
-    calle: 8,
+    Zona: "Templo",
+    calle: "Tokyo",
     precio: 30,
     disponible: true,
-    imagen: img,
+    imagen: img2,
 },
 {
-    Hotel: "Formula 1",
-    calle: 13,
+    Zona: "Formula 1",
+    calle: "Nürburgring",
     precio: 300,
     disponible: false,
-    imagen: img,
+    imagen: img3,
 },
 {
-    Hotel: "Castillo",
-    calle: 4,
+    Zona: "Castillo",
+    calle: "Transilvania",
     precio: 250,
-    disponible: true,
-    imagen: img,
+    disponible: false,
+    imagen: img4,
 },
 ]

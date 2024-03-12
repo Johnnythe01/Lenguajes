@@ -4,10 +4,18 @@ import { ListaOcio } from '../datos/ListaOcio';
 
 function ActividadesLectura () {
   return (
-    <div>
-      <h1>Zona de Ocio</h1>
-      <p>Bienvenido a nuestra zona de Ocio, donde puedes informarte de los eventos más interesantes.</p>
-    </div>
+    <Row>
+      {ListaOcio.map((filas, indice) =>
+        <Col>
+          <div className='text-center'>
+            <img src={filas.imagen} style={{ height: '270px', width: '350px' }} />
+            <h1>{filas.Actividad}</h1>
+            <p>Ubicación: {filas.calle}</p>
+            <p>Precio: {filas.precio}</p>
+            <p>Disponible: {filas.disponible ? "Si" : "No"}</p>
+          </div>
+        </Col>)}
+    </Row>
   );
 }
 

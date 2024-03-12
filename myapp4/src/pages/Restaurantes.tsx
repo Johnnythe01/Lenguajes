@@ -4,10 +4,18 @@ import { ListaRestaurantes } from '../datos/ListaRestaurantes';
 
 function Restaurantes () {
   return (
-    <div>
-      <h1>Restaurantes</h1>
-      <p>Aquí encontrarás los restaurantes mas visitados de la ciudad.</p>
-    </div>
+    <Row>
+      {ListaRestaurantes.map((filas, indice) =>
+        <Col>
+          <div className='text-center'>
+            <img src={filas.imagen} style={{ height: '300px', width: '300px' }} />
+            <h1>{filas.Restaurante}</h1>
+            <p>Ubicación: {filas.calle}</p>
+            <p>Precio: {filas.precio}</p>
+            <p>Disponible: {filas.disponible ? "Si" : "No"}</p>
+          </div>
+        </Col>)}
+    </Row>
   );
 }
 
