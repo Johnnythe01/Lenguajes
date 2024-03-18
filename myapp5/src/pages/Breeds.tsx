@@ -63,7 +63,10 @@ function Breeds() {
         return (
             <>
                 {razas.map((raza, i) => {
-                    return <p>{raza.name}</p>;
+                    return <div>
+                        <p>{raza.name}</p>
+                        <p>{raza.description}</p>
+                    </div>;
                 }
                 )}
                 </>
