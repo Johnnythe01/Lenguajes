@@ -1,4 +1,5 @@
 import React from 'react'
+import Cards from '../components/Cards';
 
 export type Razas = Raza[]
 
@@ -66,6 +67,7 @@ function Breeds() {
                     return <div>
                         <p>{raza.name}</p>
                         <p>{raza.description}</p>
+                        <p>{}</p>
                     </div>;
                 }
                 )}
