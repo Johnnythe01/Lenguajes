@@ -77,3 +77,20 @@ function Breeds() {
     
 
 export default Breeds
+
+/*
+<div>
+<h1 className="position-relative">Razas</h1>
+<div className="d-flex justify-content-center">
+<Form.Select className="w-50 " value={selectRazaId} onChange={handleRazaChange}>
+  <option value="">Seleccione una raza</option>
+
+  {razas.map((raza) => (
+    <option value={raza.id}>
+      {raza.name}
+    </option>
+  ))}
+</Form.Select >
+</div>
+{selectRazaId && <RazaDetalles id={selectRazaId} />}
+*/
