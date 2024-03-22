@@ -1,15 +1,10 @@
-import React from 'react';
+//import React from 'react';
 import './App.css';
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-  Link,
-} from "react-router-dom";
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+//import Container from 'react-bootstrap/Container';
+//import Nav from 'react-bootstrap/Nav';
 import Navbar from './components/NavBar';
-import Cards from './components/Cards';
+//import Cards from './components/Cards';
 import Breeds from './pages/Breeds';
 import Inicio from './pages/home';
 import { Col, Row } from "react-bootstrap";

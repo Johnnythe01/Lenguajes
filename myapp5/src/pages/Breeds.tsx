@@ -1,5 +1,7 @@
 import React from 'react'
-import Cards from '../components/Cards';
+import { Col, Row } from "react-bootstrap";
+import Card from "react-bootstrap/Card";
+import Image from 'react-bootstrap/Image';
 
 export type Razas = Raza[]
 
@@ -51,30 +53,43 @@ export interface Weight {
 }
 
 function Breeds() {
-        const [razas, setRazas] = React.useState([] as Razas)
-        React.useEffect(() => {
-            fetch("https://api.thecatapi.com/v1/breeds",{
+    const [razas, setRazas] = React.useState([] as Razas)
+    
+    React.useEffect(() => {
+        fetch("https://api.thecatapi.com/v1/breeds", {
             headers: {
                 "x-api.key": "live_mcTVh4fpn2L66xOCrz41QwgJdWazS7V74N62rI2Rd21cNDvDaT1m974KaXgNHjNl",
             },
-        }).then((response) => response.json()).then((data: Razas )=> {
-                setRazas(data);
-            });
-        }, []);
-        return (
-            <>
-                {razas.map((raza, i) => {
-                    return <div>
-                        <p>{raza.name}</p>
-                        <p>{raza.description}</p>
-                        <p>{}</p>
-                    </div>;
-                }
-                )}
-                </>
-        );
-    }
+        })
+        .then((response) => response.json())
+        .then((data: Razas) => {
+            setRazas(data);
+        });
+    }, []);
     
+    return (
+        <Row xs={1} sm={2} md={3} lg={4} className='g-4'>
+            {razas.map((raza, i) => (
+                <Col key={i}>
+                    <Card className="card-body2">
+                        <Card.Body>
+                            <Card.Title>{raza.name}</Card.Title>
+                            <Card.Text>{raza.origin}</Card.Text>
+                        </Card.Body>
+                        {raza.reference_image_id && (
+                            <Image
+                                src={`https://cdn2.thecatapi.com/images/${raza.reference_image_id}.jpg`}
+                                alt={raza.name}
+                                fluid
+                                style={{ maxWidth: '200px', height: 'auto' }}
+                            />
+                        )}
+                    </Card>
+                </Col>
+            ))}
+        </Row>
+    );
+}
 
 export default Breeds
 
