@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "https://johnnythe01.github.io/Lenguajes/myapp5/build/static/css/main.db62923b.css",
+    "main.js": "https://johnnythe01.github.io/Lenguajes/myapp5/build/static/js/main.1337753f.js",
+    "static/js/453.4e042450.chunk.js": "https://johnnythe01.github.io/Lenguajes/myapp5/build/static/js/453.4e042450.chunk.js",
+    "index.html": "https://johnnythe01.github.io/Lenguajes/myapp5/build/index.html",
+    "main.db62923b.css.map": "https://johnnythe01.github.io/Lenguajes/myapp5/build/static/css/main.db62923b.css.map",
+    "main.1337753f.js.map": "https://johnnythe01.github.io/Lenguajes/myapp5/build/static/js/main.1337753f.js.map",
+    "453.4e042450.chunk.js.map": "https://johnnythe01.github.io/Lenguajes/myapp5/build/static/js/453.4e042450.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.db62923b.css",
+    "static/js/main.1337753f.js"
+  ]
+}

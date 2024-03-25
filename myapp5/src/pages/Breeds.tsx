@@ -1,5 +1,5 @@
 import React from 'react'
-import { Col, Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import Card from "react-bootstrap/Card";
 import Image from 'react-bootstrap/Image';
 
@@ -68,6 +68,7 @@ function Breeds() {
     }, []);
     
     return (
+        <Container>
         <Row xs={1} sm={2} md={3} lg={4} className='g-4'>
             {razas.map((raza, i) => (
                 <Col key={i}>
@@ -88,6 +89,7 @@ function Breeds() {
                 </Col>
             ))}
         </Row>
+        </Container>
     );
 }
 

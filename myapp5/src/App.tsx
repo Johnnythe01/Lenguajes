@@ -8,6 +8,7 @@ import Navbar from './components/NavBar';
 import Breeds from './pages/Breeds';
 import Inicio from './pages/home';
 import { Col, Row } from "react-bootstrap";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
