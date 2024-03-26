@@ -54,41 +54,41 @@ export interface Weight {
 
 function Breeds() {
     const [razas, setRazas] = React.useState([] as Razas)
-    
+
     React.useEffect(() => {
         fetch("https://api.thecatapi.com/v1/breeds", {
             headers: {
                 "x-api.key": "live_mcTVh4fpn2L66xOCrz41QwgJdWazS7V74N62rI2Rd21cNDvDaT1m974KaXgNHjNl",
             },
         })
-        .then((response) => response.json())
-        .then((data: Razas) => {
-            setRazas(data);
-        });
+            .then((response) => response.json())
+            .then((data: Razas) => {
+                setRazas(data);
+            });
     }, []);
-    
+
     return (
         <Container>
-        <Row xs={1} sm={2} md={3} lg={4} className='g-4'>
-            {razas.map((raza, i) => (
-                <Col key={i}>
-                    <Card className="card-body2">
-                        <Card.Body>
-                            <Card.Title>{raza.name}</Card.Title>
-                            <Card.Text>{raza.origin}</Card.Text>
-                        </Card.Body>
-                        {raza.reference_image_id && (
-                            <Image
-                                src={`https://cdn2.thecatapi.com/images/${raza.reference_image_id}.jpg`}
-                                alt={raza.name}
-                                fluid
-                                style={{ maxWidth: '200px', height: 'auto' }}
-                            />
-                        )}
-                    </Card>
-                </Col>
-            ))}
-        </Row>
+            <Row xs={1} sm={2} md={3} lg={4} className='g-4'>
+                {razas.map((raza, i) => (
+                    <Col key={i}>
+                        <Card className="card-body2">
+                            <Card.Body>
+                                <Card.Title>{raza.name}</Card.Title>
+                                <Card.Text>{raza.origin}</Card.Text>
+                            </Card.Body>
+                            {raza.reference_image_id && (
+                                <Image
+                                    src={`https://cdn2.thecatapi.com/images/${raza.reference_image_id}.jpg`}
+                                    alt={raza.name}
+                                    fluid
+                                    style={{ maxWidth: '200px', height: 'auto' }}
+                                />
+                            )}
+                        </Card>
+                    </Col>
+                ))}
+            </Row>
         </Container>
     );
 }

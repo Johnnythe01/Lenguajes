@@ -1,14 +1,12 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import Button from 'react-bootstrap/Button'
-import Form from 'react-bootstrap/Form'
+import Form from 'react-bootstrap/Form';
 import { Razas } from '../pages/Breeds';
 
-const BarraNav: React.FC = () => {
+const NavBar: React.FC = () => {
+  const [razas, setRazas] = useState<Razas>([]);
 
-  const [razas, setRazas] = React.useState([] as Razas)
-
-  React.useEffect(() => {
+  useEffect(() => {
     fetch("https://api.thecatapi.com/v1/breeds", {
       headers: {
         "x-api.key": "live_mcTVh4fpn2L66xOCrz41QwgJdWazS7V74N62rI2Rd21cNDvDaT1m974KaXgNHjNl",
@@ -19,6 +17,11 @@ const BarraNav: React.FC = () => {
         setRazas(data);
       });
   }, []);
+
+  const handleSelectRaza = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    const selectedRazaId = event.target.value;
+  };
+
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container">
@@ -30,16 +33,13 @@ const BarraNav: React.FC = () => {
             </li>
             <li className="nav-item">
               <Form className="d-flex">
-                <Form.Select aria-label="Default select example">
-                <option value={-1}></option>
-
-                  {razas.map((raza, i) => (
-                    <option value={i}>{raza.name}</option>
-                    
+                <Form.Select aria-label="Default select example" onChange={handleSelectRaza}>
+                  <option value="">Selecciona una raza</option>
+                  {razas.map((raza) => (
+                    <option key={raza.id} value={raza.id}>{raza.name}</option>
                   ))}
                 </Form.Select>
               </Form>
-              <Button variant="outline-success">Buscar</Button>
             </li>
           </ul>
         </div>
@@ -48,4 +48,4 @@ const BarraNav: React.FC = () => {
   );
 }
 
-export default BarraNav;
+export default NavBar;
