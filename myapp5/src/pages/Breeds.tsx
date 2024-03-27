@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { Col, Container, Row } from "react-bootstrap";
 import Card from "react-bootstrap/Card";
 import Image from 'react-bootstrap/Image';
@@ -52,6 +53,7 @@ export interface Weight {
     metric: string
 }
 
+
 function Breeds() {
     const [razas, setRazas] = React.useState([] as Razas)
 
@@ -72,20 +74,22 @@ function Breeds() {
             <Row xs={1} sm={2} md={3} lg={4} className='g-4'>
                 {razas.map((raza, i) => (
                     <Col key={i}>
-                        <Card className="card-body2">
-                            <Card.Body>
-                                <Card.Title>{raza.name}</Card.Title>
-                                <Card.Text>{raza.origin}</Card.Text>
-                            </Card.Body>
-                            {raza.reference_image_id && (
-                                <Image
-                                    src={`https://cdn2.thecatapi.com/images/${raza.reference_image_id}.jpg`}
-                                    alt={raza.name}
-                                    fluid
-                                    style={{ maxWidth: '200px', height: 'auto' }}
-                                />
-                            )}
-                        </Card>
+                        <Link to={`/breeds/${raza.id}`}>
+                            <Card className="card-body2">
+                                <Card.Body>
+                                    <Card.Title>{raza.name}</Card.Title>
+                                    <Card.Text>{raza.origin}</Card.Text>
+                                </Card.Body>
+                                {raza.reference_image_id && (
+                                    <Image
+                                        src={`https://cdn2.thecatapi.com/images/${raza.reference_image_id}.jpg`}
+                                        alt={raza.name}
+                                        fluid
+                                        style={{ maxWidth: '200px', height: 'auto' }}
+                                    />
+                                )}
+                            </Card>
+                        </Link>
                     </Col>
                 ))}
             </Row>
@@ -94,20 +98,3 @@ function Breeds() {
 }
 
 export default Breeds
-
-/*
-<div>
-<h1 className="position-relative">Razas</h1>
-<div className="d-flex justify-content-center">
-<Form.Select className="w-50 " value={selectRazaId} onChange={handleRazaChange}>
-  <option value="">Seleccione una raza</option>
-
-  {razas.map((raza) => (
-    <option value={raza.id}>
-      {raza.name}
-    </option>
-  ))}
-</Form.Select >
-</div>
-{selectRazaId && <RazaDetalles id={selectRazaId} />}
-*/

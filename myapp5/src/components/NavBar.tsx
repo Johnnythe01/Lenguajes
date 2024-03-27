@@ -18,10 +18,6 @@ const NavBar: React.FC = () => {
       });
   }, []);
 
-  const handleSelectRaza = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    const selectedRazaId = event.target.value;
-  };
-
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container">
@@ -33,10 +29,12 @@ const NavBar: React.FC = () => {
             </li>
             <li className="nav-item">
               <Form className="d-flex">
-                <Form.Select aria-label="Default select example" onChange={handleSelectRaza}>
+                <Form.Select aria-label="Default select example">
                   <option value="">Selecciona una raza</option>
                   {razas.map((raza) => (
-                    <option key={raza.id} value={raza.id}>{raza.name}</option>
+                    <option key={raza.id} value={raza.id}>
+                      <Link to={`/breeds/${raza.id}`}>{raza.name}</Link>
+                    </option>
                   ))}
                 </Form.Select>
               </Form>
