@@ -1,8 +1,7 @@
-//import React from 'react';
+import React from 'react';
 import './App.css';
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
 import Navbar from './components/NavBar';
 import Breeds from './pages/Breeds';
 import BreedsDetails from './pages/BreedsDetails';
@@ -14,14 +13,13 @@ function App() {
     <>
       <BrowserRouter>
         <Navbar />
-
-        <Routes>
-          <Route index Component={Inicio} />
-          <Route path="/breeds" element={<Breeds />} />
-          <Route path="/breeds/id" element={<BreedsDetails id={""} />} />
-        </Routes>
-
-
+        <Container>
+          <Routes>
+            <Route index element={<Inicio />} />
+            <Route path="/breeds" element={<Breeds />} />
+            <Route path="/breeds/:id" element={<BreedsDetails />} />
+          </Routes>
+        </Container>
       </BrowserRouter>
     </>
   );

@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Col, Container, Row } from "react-bootstrap";
+import { useParams } from 'react-router-dom';
 import Card from "react-bootstrap/Card";
 import Image from 'react-bootstrap/Image';
-export type BreedsDetails = BreedsDetails[];
-
-export type Razas = Raza[]
 
 export interface Raza {
     weight: Weight
@@ -36,9 +33,9 @@ export interface Weight {
     metric: string
 }
 
-
-const BreedsDetails = ({ id }: { id: string }) => {
-    const [breedDetail, setBreedDetail] = useState<Raza | null>(null);
+const BreedsDetails = () => {
+    const { id } = useParams<{ id: string }>();
+    const [breedDetail, setBreedDetail] = useState<Raza[]>([]);
     const [imageUrl, setImageUrl] = useState<string | null>(null);
 
     useEffect(() => {
@@ -49,14 +46,14 @@ const BreedsDetails = ({ id }: { id: string }) => {
         })
             .then((response) => response.json())
             .then((data: Raza) => {
-                setBreedDetail(data);
+                setBreedDetail([data]);
                 fetchImage(data.reference_image_id || '');
             });
     }, [id]);
 
     const fetchImage = (imageId: string) => {
-        fetch(`https://cdn2.thecatapi.com/images/${imageId}`, {
-            method: 'HEAD'
+        fetch(`https://cdn2.thecatapi.com/images/${imageId}.png`, {
+            method: 'GET'
         })
             .then((response) => {
                 const contentType = response.headers.get('content-type');
@@ -71,36 +68,34 @@ const BreedsDetails = ({ id }: { id: string }) => {
     return (
         <div className="container-fluid">
             <h1 className="position-relative">Detalles de las Razas</h1>
-            {breedDetail && (
-                <Card className="text-center align-self-baseline">
-                    <Card.Body>
-                        <Card.Title>{breedDetail.name}</Card.Title>
+            {breedDetail.map((raza) => (
+                <Card className="text-center align-self-baseline" key={raza.id}>
+                    <Card.Body >
+                        <Card.Title>{raza.name}</Card.Title> {/* Accede a las propiedades de la raza actual */}
                         <Card.Text>
-                            <h1>Bred for: {breedDetail.intelligence}</h1>
+                            <h1>Origin:</h1> {raza.origin}
                         </Card.Text>
                         <Card.Text>
-                            <h1>Weight:</h1> {breedDetail.weight.imperial} lbs ({breedDetail.weight.metric} kg)
+                            <h1>Weight:</h1> ({raza.weight.metric} kg)
                         </Card.Text>
                         <Card.Text>
-                            <h1>Life span:</h1> {breedDetail.dog_friendly}
+                            <h1>Temperament:</h1> {raza.temperament}
                         </Card.Text>
                         <Card.Text>
-                            <h1>Temperament:</h1> {breedDetail.temperament}
-                        </Card.Text>
-                        <Card.Text>
-                            <h1>Details:</h1> {breedDetail.description}
+                            <h1>Details:</h1> {raza.description}
                         </Card.Text>
                         {imageUrl && (
                             <Image className="img-fluid"
                                 src={imageUrl}
-                                alt={breedDetail.name}
+                                alt={raza.name}
                                 fluid
                             />
                         )}
                     </Card.Body>
                 </Card>
-            )}
+            ))}
         </div>
     );
 };
-export default BreedsDetails
+
+export default BreedsDetails;
