@@ -1,41 +1,60 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Col, Container, Row } from "react-bootstrap";
+import Card from "react-bootstrap/Card";
+import Image from 'react-bootstrap/Image';
 
-interface Item {
-  nombre: string;
-  id: number;
-  disponible: boolean;
+export type Armas = Arma[]
+
+export interface Arma {
+
+  nombre: string
+  id: string
+  disponible: true
+  origen: string
+  imageUrl: string
+  reference_image_id?: string
 }
 
-function Fantasia() {
-  const [data, setData] = useState<Item[]>([]);
 
-  useEffect(() => {
-    fetchData();
+function Breeds() {
+  const [armas, setArmas] = React.useState([] as Armas)
+
+  React.useEffect(() => {
+    fetch("https://raw.githubusercontent.com/Johnnythe01/Lenguajes/main/myapp6/src/data.json", {
+    })
+      .then((response) => response.json())
+      .then((data: Armas) => {
+        setArmas(data);
+      });
   }, []);
 
-  const fetchData = async () => {
-    try {
-      const response = await fetch('data.json');
-      const jsonData: Item[] = await response.json();
-      setData(jsonData);
-    } catch (error) {
-      console.error('Error fetching data:', error);
-    }
-  };
-
   return (
-    <div>
-      <h1>Lista de Elementos</h1>
-      <ul>
-        {data.map((item, index) => (
-          <li key={index}>
-            <strong>Nombre:</strong> {item.nombre}, <strong>ID:</strong> {item.id},{' '}
-            <strong>Disponible:</strong> {item.disponible ? 'Sí' : 'No'}
-          </li>
+    <Container>
+      <Row xs={1} sm={2} md={3} lg={4} className='g-4'>
+        {armas.map((arma, i) => (
+          <Col key={i}>
+            <Link to={`/breeds/${arma.id}`}>
+              <Card className="card-body2">
+                <Card.Body>
+                  <Card.Title>{arma.nombre}</Card.Title>
+                  <Card.Text>{arma.origen}</Card.Text>
+                </Card.Body>
+                {arma.reference_image_id && (
+                  <Image
+                    src={`https://cdn2.thecatapi.com/images/${arma.reference_image_id}.jpg`}
+                    alt={arma.nombre}
+                    fluid
+                    style={{ maxWidth: '200px', height: 'auto' }}
+                  />
+                )}
+              </Card>
+            </Link>
+          </Col>
         ))}
-      </ul>
-    </div>
+      </Row>
+    </Container>
   );
 }
 
-export default Fantasia;
+export default Breeds

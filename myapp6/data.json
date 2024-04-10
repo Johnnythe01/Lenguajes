@@ -3,30 +3,35 @@
       "nombre": "Crematoria",
       "id": 1,
       "disponible": true,
+      "origen": "Alto Señor Tirion Fordring",
       "imageUrl": "https://wowpedia.fandom.com/wiki/Ashbringer?file=Ashbringer.jpg"
     },
     {
       "nombre": "Agonía de Escarcha",
       "id": 2,
       "disponible": false,
+      "origen": "Arthas, Lich King",
       "imageUrl": "https://www.reddit.com/r/wow/comments/dkp2di/frostmourne_weapon_looks_more_detailed_in/#lightbox"
     },
     {
       "nombre": "Gujas de Guerra de Azzinoth",
       "id": 3,
       "disponible": true,
+      "origen": "Illidan Stormrage",
       "imageUrl": "https://conquestcapped.com/image/cache/catalog/wow/transmogs/legendary-items/warglaives-of-azzinoth-630x400.png"
     },
     {
       "nombre": "Sulfuras",
       "id": 4,
       "disponible": true,
+      "origen": "Padre Elemental de Fuego Ragnaros",
       "imageUrl": "https://conquestcapped.com/image/cache/catalog/wow/transmogs/weapon-transmog/sulfuras-the-extinguished-hand-transmog-630x400.png"
     },
     {
       "nombre": "Martillo Maldito",
       "id": 5,
       "disponible": false,
+      "origen": "Orgrim Doomhammer",
       "imageUrl": "https://silverknights.net/resources/Pb5x5jqX"
     }
   ]
