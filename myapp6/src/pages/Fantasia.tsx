@@ -17,7 +17,7 @@ export interface Arma {
 }
 
 
-function Breeds() {
+function Fantasia () {
   const [armas, setArmas] = React.useState([] as Armas)
 
   React.useEffect(() => {
@@ -34,15 +34,15 @@ function Breeds() {
       <Row xs={1} sm={2} md={3} lg={4} className='g-4'>
         {armas.map((arma, i) => (
           <Col key={i}>
-            <Link to={`/breeds/${arma.id}`}>
+            <Link to={`/Fantasia/${arma.id}`}>
               <Card className="card-body2">
                 <Card.Body>
                   <Card.Title>{arma.nombre}</Card.Title>
                   <Card.Text>{arma.origen}</Card.Text>
                 </Card.Body>
-                {arma.reference_image_id && (
+                {(
                   <Image
-                    src={arma.reference_image_id}
+                    src={arma.imageUrl}
                     alt={arma.nombre}
                     fluid
                     style={{ maxWidth: '200px', height: 'auto' }}
@@ -57,4 +57,4 @@ function Breeds() {
   );
 }
 
-export default Breeds
+export default Fantasia
