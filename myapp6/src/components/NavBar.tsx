@@ -25,16 +25,16 @@ const NavBar: React.FC = () => {
               <Link className="nav-link" to="/Fantasia">Tipos de Armas</Link>
             </li>
             <li className="nav-item">
-              <Form className="d-flex">
+              {/* <Form className="d-flex">
                 <Form.Select aria-label="Default select example">
                   <option value="">Selecciona un arma</option>
                   {armas.map((arma) => (
                     <option key={arma.id} value={arma.id}>
                       <Link to={`/Fantasia/${arma.id}`}>{arma.nombre}</Link>
-                    </option>
-                  ))}
-                </Form.Select>
-              </Form>
+                    </option> */}
+                  {/* ))} */}
+                {/* </Form.Select> */}
+              {/* </Form> */}
             </li>
           </ul>
         </div>
