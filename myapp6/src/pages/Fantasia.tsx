@@ -16,7 +16,6 @@ export interface Arma {
   reference_image_id?: string
 }
 
-
 function Fantasia() {
   const [armas, setArmas] = React.useState([] as Armas)
 
