@@ -21,7 +21,7 @@ function Breeds() {
   const [armas, setArmas] = React.useState([] as Armas)
 
   React.useEffect(() => {
-    fetch("https://raw.githubusercontent.com/Johnnythe01/Lenguajes/main/myapp6/src/data.json", {
+    fetch("https://raw.githubusercontent.com/Johnnythe01/Lenguajes/main/myapp6/data.json", {
     })
       .then((response) => response.json())
       .then((data: Armas) => {
@@ -42,7 +42,7 @@ function Breeds() {
                 </Card.Body>
                 {arma.reference_image_id && (
                   <Image
-                    src={`https://cdn2.thecatapi.com/images/${arma.reference_image_id}.jpg`}
+                    src={arma.reference_image_id}
                     alt={arma.nombre}
                     fluid
                     style={{ maxWidth: '200px', height: 'auto' }}
