@@ -21,16 +21,16 @@ const NavBar: React.FC = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container">
-        <Link className="navbar-brand" to="/">Guía de Gatos</Link>
+        <Link className="navbar-brand" to="/"> Guía de Gatos </Link>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <Link className="nav-link" to="/Breeds">Razas de Gatos</Link>
+              <Link className="nav-link" to="/Breeds"> Razas de Gatos </Link>
             </li>
             <li className="nav-item">
               <Form className="d-flex">
                 <Form.Select aria-label="Default select example">
-                  <option value="">Selecciona una raza</option>
+                  <option value=""> Selecciona una raza </option>
                   {razas.map((raza) => (
                     <option key={raza.id} value={raza.id}>
                       <Link to={`/breeds/${raza.id}`}>{raza.name}</Link>

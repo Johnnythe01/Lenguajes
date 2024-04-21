@@ -20,7 +20,7 @@ const Cards: React.FC<CardsProps> = ({ raza }) => {
         <ListGroup.Item>Origin: {raza.origin}</ListGroup.Item>
         <ListGroup.Item>Life Span: {raza.life_span}</ListGroup.Item>
       </ListGroup>
-      <Card.Body>
+      <Card.Body> 
       <Card.Link href={raza.wikipedia_url}>Wikipedia Link</Card.Link>
       </Card.Body>
     </Card>
