@@ -67,22 +67,22 @@ const BreedsDetails = () => {
 
     return (
         <div className="container-fluid">
-            <h1 className="position-relative">Detalles de las Razas</h1>
+            <h1 className="position-relative"> Detalles de las Razas </h1>
             {breedDetail.map((raza) => (
                 <Card className="text-center align-self-baseline" key={raza.id}>
                     <Card.Body >
                         <Card.Title>{raza.name}</Card.Title> {/* Accede a las propiedades de la raza actual */}
                         <Card.Text>
-                            <h1>Origin:</h1> {raza.origin}
+                            <h1>Origin: </h1> {raza.origin}
                         </Card.Text>
                         <Card.Text>
-                            <h1>Weight:</h1> ({raza.weight.metric} kg)
+                            <h1>Weight: </h1> ({raza.weight.metric} kg)
                         </Card.Text>
                         <Card.Text>
-                            <h1>Temperament:</h1> {raza.temperament}
+                            <h1>Temperament: </h1> {raza.temperament}
                         </Card.Text>
                         <Card.Text>
-                            <h1>Details:</h1> {raza.description}
+                            <h1>Details: </h1> {raza.description}
                         </Card.Text>
                         {imageUrl && (
                             <Image className="img-fluid"
