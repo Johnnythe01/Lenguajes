@@ -15,12 +15,6 @@ app.get('/personas', (req, res) => {
     res.json(rows)
 })
 
-app.post('/persona', (req, res) => {
-    personaId = req.body.id;
-    const row = db.prepare('SELECT * from personas WHERE id = ?').get(personaId);
-    res.json(row)
-})
-
 app.get("/persona", (req, res) => {
     personaId = req.query.id;
     console.log(typeof (personaId));
@@ -30,4 +24,9 @@ app.get("/persona", (req, res) => {
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
+})
+
+app.get('/personas', (req, res) => {
+    const rows = db.prepare('SELECT * from personas').all();
+    res.json(rows)
 })
