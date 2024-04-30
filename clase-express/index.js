@@ -26,7 +26,17 @@ app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
 })
 
-app.get('/personas', (req, res) => {
-    const rows = db.prepare('SELECT * from personas').all();
+app.get('/usuarios', (req, res) => {
+    const rows = db.prepare('SELECT * from usuarios').all();
+    res.json(rows)
+})
+
+app.get('/productos', (req, res) => {
+    const rows = db.prepare('SELECT * from productos').all();
+    res.json(rows)
+})
+
+app.get('/comandas', (req, res) => {
+    const rows = db.prepare('SELECT * from comandas').all();
     res.json(rows)
 })
