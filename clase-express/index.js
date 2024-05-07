@@ -43,6 +43,21 @@ app.post("/usuario", (req, res) => {
     }
     res.redirect("usuario");
 })
+app.get('/producto', (req, res) =>{
+    res.render("producto");
+})
+
+//capturaremos el submit del form
+app.post("/producto", (req, res) => {
+    console.log(req.body);
+    if (req.body.nombre && req.body.precio) {
+        //insert
+        const statement = db.prepare("INSERT INTO productos (nombre, precio) VALUES (?, ?)")
+        const info = statement.run(req.body.nombre, req.body.precio);
+        console.log(info);
+    }
+    res.redirect("producto");
+})
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
