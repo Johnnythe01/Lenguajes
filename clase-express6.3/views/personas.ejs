@@ -1,0 +1,12 @@
+<form action="/personas">
+    <div>
+        <h1>Personas</h1>
+        <% personas.forEach((personas, index ) => { %>
+            <div>
+                <a href="/personas?id=<%= personas.id %>">
+                    <p><%= personas.nombre %></p>
+                </a>
+            </div>
+        <% }) %>
+    </div>
+</form>
