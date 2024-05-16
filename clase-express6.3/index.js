@@ -18,14 +18,15 @@ app.get('/vistausuarios', (req, res) => {
     res.render("index", msgs = { msgs: rows })
 })
 
-app.get('/patata', (req, res) => {
-    res.send('Hello World!')
+// devolveremos el render de la vista con un form
+app.get('/usuarios', (req, res) => {
+    const usuarios = db.prepare('SELECT * from usuarios').all();
+    res.render('usuarios', { usuarios: usuarios });
 })
 
-// devolveremos el render de la vista con un form
-app.get('/personas', (req, res) => {
-    const rows = db.prepare('SELECT * from personas').all();
-    res.render('personas',  personas = rows )
+app.get('/comandas', (req, res) => {
+    const comandas = db.prepare('SELECT * from comandas').all();
+    res.render('comandas', { comandas: comandas });
 })
 
 app.get('/usuario', (req, res) =>{
@@ -79,3 +80,4 @@ app.get('/comandas', (req, res) => {
     const rows = db.prepare('SELECT * from comandas').all();
     res.json(rows)
 })
+
