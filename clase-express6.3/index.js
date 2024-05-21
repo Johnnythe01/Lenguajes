@@ -46,8 +46,16 @@ app.post("/usuario", (req, res) => {
 })
 
 app.get('/productos', (req, res) => {
-    const rows = db.prepare('SELECT * from productos').all();
-    res.render('productos',  productos = rows )
+    const productos = db.prepare('SELECT * from productos').all();
+    res.render('productos',  productos = productos )
+})
+app.get('/producto', (req, res) =>{
+    res.render("producto");
+})
+app.get('/productoDetalle', (req, res) =>{
+    id = req.query.id;
+    const producto = db.prepare('SELECT * from productos where id = ?').get(id);
+    res.render("productoDetalle", {producto: producto});
 })
 
 //capturaremos el submit del form

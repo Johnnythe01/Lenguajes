@@ -1,11 +1,11 @@
 <%- include("header") %>
 
-<form action="/comandas">
+<form action="/productoDetalle">
     <div>
         <h1>Comandas</h1>
         <% comandas.forEach((comandas, index ) => { %>
             <div>
-                <a href="/comandas?id=<%= comandas.id %>">
+                <a href="/productoDetalle?id=<%= productoDetalle.id %>">
                     <p><%= comandas.id %>, <%= comandas.id_usuarios %>, <% comandas.id_productos %></p>
                 </a>
             </div>
