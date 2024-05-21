@@ -1,16 +1,18 @@
 <%- include("header") %>
 
-<form action="/comandas">
-    <div>
-        <h1>Comandas</h1>
-        <% comandas.forEach((comandas, index ) => { %>
-            <div>
-                <a href="/comandas?id=<%= comandas.id %>">
-                    <p><%= comandas.id %>, <%= comandas.id_usuarios %>, <% comandas.id_productos %></p>
-                </a>
-            </div>
-        <% }) %>
-    </div>
-</form>
+    <form action="/comandas">
+        <div>
+            <h1>Comandas</h1>
+            <% comandas.forEach((comandas, index )=> { %>
+                <div>
+                    <a href="/comandas?id=<%= comandas.id %>">
+                        <p>
+                            <%= comandas.id %>, <%= comandas.id_usuarios %>, <% comandas.id_productos %>
+                        </p>
+                    </a>
+                </div>
+                <% }) %>
+        </div>
+    </form>
 
-<%include("footer") %>
+    <%include("footer") %>
