@@ -4,9 +4,7 @@
         <div>
             <h1>Productos</h1>
             <% productos.forEach((productos, index )=> { %>
-                <div>
-                    <a href="/productoDetalle?id=<%= productos.id %>"><p><%= productos.nombre %>, <%= productos.id %></p></a>
-                </div>
+                    <a href="/productoDetalle?id=<%= productos.id %>"><p><%= productos.nombre %></p></a>
                 <% }) %>
         </div>
     </form>
