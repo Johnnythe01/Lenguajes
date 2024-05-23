@@ -85,9 +85,9 @@ app.get('/comandas', (req, res) => {
 })
 
 app.get('/comanda', (req, res) =>{
-    // Select de usuarios y Productos
-    const usuarios = db.prepare('SELECT * from Usuarios').all()
-    const productos = db.prepare('SELECT * from Productos').all()
+    // Select de usuarios y productos
+    const usuarios = db.prepare('SELECT * from usuarios').all()
+    const productos = db.prepare('SELECT * from productos').all()
     res.render("comanda", {usuaris: usuarios, productes: productos});
   })
 
@@ -101,6 +101,13 @@ app.get('/comanda', (req, res) =>{
         console.log(info)
       }
     }})
+
+    app.get('/comandaDetalle', (req, res) => {
+        id = req.query.id;
+        console.log(req.query);
+        const comanda = db.prepare('SELECT comandas.id, productos.nombre as producto_nombre, usuarios.nombre FROM comandas JOIN productos ON productos.id = comandas.id_productos JOIN usuarios ON usuarios.id = comandas.id_usuarios WHERE comandas.id = ?').get(id);
+        res.render("comandaDetalle", { comanda: comanda });
+    })
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)

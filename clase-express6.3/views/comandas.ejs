@@ -4,7 +4,7 @@
         <div>
             <h1>Comandas</h1>
             <% comandas.forEach((comandas, index )=> { %>
-                <a href="/comandas?id=<%= comandas.id %>">
+                <a href="/comandaDetalle?id=<%= comandas.id %>">
                     <p><%= comandas.id %>, <%= comandas.id_usuarios %>, <% comandas.id_productos %></p>
                 </a>
             <% }) %>

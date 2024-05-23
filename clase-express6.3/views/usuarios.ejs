@@ -5,7 +5,7 @@
             <h1>Usuarios</h1>
             <% usuarios.forEach((usuarios, index )=> { %>
                 <div>
-                    <a href="/usuarios?id=<%= usuarios.id %>">
+                    <a href="/usuarioDetalle?id=<%= usuarios.id %>">
                         <p>
                             <%= usuarios.nombre %>
                         </p>
@@ -14,5 +14,7 @@
                 <% }) %>
         </div>
     </form>
-    -
+    
+    <a class="btn btn-primary" href="/usuario"> Crear usuario </a>
+
     <%include("footer") %>
