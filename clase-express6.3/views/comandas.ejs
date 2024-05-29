@@ -3,12 +3,14 @@
     <form action="/comandas" method="get">
         <div>
             <h1>Comandas</h1>
-            <% comandas.forEach((comandas, index )=> { %>
-                <a href="/comandaDetalle?id=<%= comandas.id %>">
-                    <p><%= comandas.id %>, <%= comandas.id_usuarios %>, <% comandas.id_productos %></p>
+            <% comandas.forEach((comanda, index )=> { %>
+                <a href="/comandaDetalle?id=<%= comanda.id_comanda %>">
+                    <p><%= comanda.id_comanda %> <%= comanda.nombre %> <%= comanda.nom %></p>
                 </a>
             <% }) %>
         </div>
     </form>
+
+    <a class="btn btn-primary" href="/comanda"> Crear Comanda </a>
 
     <%include("footer") %>

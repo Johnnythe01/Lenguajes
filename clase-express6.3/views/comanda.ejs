@@ -1,0 +1,24 @@
+<%- include ("header") %>
+
+    <form action="/comanda" method="post">
+        <label for="usuario">Usuario </label>
+        <select id="id_usuarios" name="id_usuarios" >
+            <% usuarios.forEach((usuarios, index)=>{ %>
+                <option value="<%= usuarios.id %>">
+                    <%= usuarios.nombre %>
+                </option>
+                <% }) %>
+        </select >
+        <label for="producto">Producto </label>
+        <select id="id_productos" name="id_productos">
+            <% productos.forEach((productos, index)=>{ %>
+                <option value="<%= productos.id %>">
+                    <%= productos.nom %>
+                </option>
+                <% }) %>
+        </select>
+        <button type="submit">Enviar</button>
+    </form>
+    </form>
+
+    <%- include("footer") %>

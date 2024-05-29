@@ -62,10 +62,10 @@ app.get('/producto', (req, res) => {
 // Capturaremos el submit del form
 app.post("/producto", (req, res) => {
     console.log(req.body);
-    if (req.body.nombre && req.body.precio) {
+    if (req.body.nom && req.body.precio) {
         // Insert
-        const statement = db.prepare("INSERT INTO productos (nombre, precio) VALUES (?, ?)")
-        const info = statement.run(req.body.nombre, req.body.precio);
+        const statement = db.prepare("INSERT INTO productos (nom, precio) VALUES (?, ?)")
+        const info = statement.run(req.body.nom, req.body.precio);
         console.log(info);
     }
     res.redirect("producto");
@@ -80,7 +80,8 @@ app.get('/productoDetalle', (req, res) => {
 })
 
 app.get('/comandas', (req, res) => {
-    const comandas = db.prepare('SELECT * from comandas').all();
+    const comandas = db.prepare('SELECT comandas.id as id_comanda, * from comandas join productos on productos.id = comandas.id_productos join usuarios on usuarios.id = comandas.id_usuarios').all();
+    console.log(comandas);
     res.render('comandas', { comandas: comandas });
 })
 
@@ -88,24 +89,26 @@ app.get('/comanda', (req, res) =>{
     // Select de usuarios y productos
     const usuarios = db.prepare('SELECT * from usuarios').all()
     const productos = db.prepare('SELECT * from productos').all()
-    res.render("comanda", {usuaris: usuarios, productes: productos});
+    res.render("comanda", {usuarios: usuarios, productos: productos});
   })
 
   app.post('/comanda', (req, res) => {
     if (req.body) {
       console.log(req.body);
-      if (req.body.usuari_id && req.body.producte_id) {
+      if (req.body.id_usuarios && req.body.id_productos) {
         //insert
-        const statement = db.prepare('INSERT INTO Comandas (usuario_id, producto_id) VALUES (?,?)')
-        const info = statement.run(req.body.usuari_id, req.body.producte_id)
+        const statement = db.prepare('INSERT INTO Comandas (id_usuarios, id_productos) VALUES (?,?)')
+        const info = statement.run(req.body.id_usuarios, req.body.id_productos)
         console.log(info)
       }
+      res.redirect('comandas')
     }})
 
     app.get('/comandaDetalle', (req, res) => {
         id = req.query.id;
         console.log(req.query);
-        const comanda = db.prepare('SELECT comandas.id, productos.nombre as producto_nombre, usuarios.nombre FROM comandas JOIN productos ON productos.id = comandas.id_productos JOIN usuarios ON usuarios.id = comandas.id_usuarios WHERE comandas.id = ?').get(id);
+        const comanda = db.prepare('SELECT comandas.id, productos.nom as producto_nom, productos.precio, usuarios.nombre FROM comandas JOIN productos ON productos.id = comandas.id_productos JOIN usuarios ON usuarios.id = comandas.id_usuarios WHERE comandas.id = ?').get(id);
+        console.log(comanda);
         res.render("comandaDetalle", { comanda: comanda });
     })
 
