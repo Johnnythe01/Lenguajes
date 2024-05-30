@@ -1,8 +1,12 @@
 <%- include ("header") %>
 
-    <p><%= comanda.id %></p>
-    <p><%= comanda.nombre %></p>
-    <p><%= comanda.producto_nom %></p>
-    <p><%= comanda.precio %> €</p>
-
+    <div>
+        <h1>Detalles de Comanda</h1>
+        <p><%= comanda.id %></p>
+        <p><%= comanda.nombre %></p>
+        <p><%= comanda.producto_nom %></p>
+        <p><%= comanda.precio %> €</p>
+    </div>
+    <h2><a href="comandaUpdate?id=<%= comanda.id %>">Editar Comanda</a></h2>
+    
     <%- include("footer") %>
