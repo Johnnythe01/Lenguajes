@@ -1,6 +1,7 @@
 <%- include("header") %>
 
-<form action="usuariUpdate" method="post">
+<h2>Edición de Usuario</h2>
+<form action="usuarioUpdate" method="post">
     <input type="text" name="id" id="id" hidden value="<%= usuario.id %>">
     <label for="nombre">Nombre </label>
     <input type="text" name="nombre" id="nombre" value="<%= usuario.nombre %>">

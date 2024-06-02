@@ -5,7 +5,9 @@
             <h1>Comandas</h1>
             <% comandas.forEach((comanda, index )=> { %>
                 <a href="/comandaDetalle?id=<%= comanda.id_comanda %>">
-                    <p><%= comanda.id_comanda %> <%= comanda.nombre %> <%= comanda.nom %></p>
+                    <p>
+                        <%= comanda.id_comanda %> <%= comanda.nombre %> <%= comanda.nom %>
+                    </p>
                 </a>
             <% }) %>
         </div>

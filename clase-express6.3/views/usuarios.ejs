@@ -4,13 +4,11 @@
         <div>
             <h1>Usuarios</h1>
             <% usuarios.forEach((usuarios, index )=> { %>
-                <div>
                     <a href="/usuarioDetalle?id=<%= usuarios.id %>">
                         <p>
                             <%= usuarios.nombre %>
                         </p>
                     </a>
-                </div>
                 <% }) %>
         </div>
     </form>
