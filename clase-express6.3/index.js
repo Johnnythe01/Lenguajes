@@ -30,7 +30,7 @@ app.get('/usuarios', (req, res) => {
 app.get('/usuarioDetalle', (req, res) => {
     id = req.query.id;
     console.log(req.query);
-    const usuario = db.prepare('SELECT * from usuarios where id = ?').get(id);
+    const usuario = db.prepare('SELECT * from usuarios WHERE id = ?').get(id);
     res.render("usuarioDetalle", { usuario: usuario });
 })
 
@@ -75,7 +75,7 @@ app.post("/producto", (req, res) => {
 app.get('/productoDetalle', (req, res) => {
     id = req.query.id;
     console.log(req.query);
-    const producto = db.prepare('SELECT * from productos where id = ?').get(id);
+    const producto = db.prepare('SELECT * from productos WHERE id = ?').get(id);
     res.render("productoDetalle", { producto: producto });
 })
 
@@ -119,7 +119,7 @@ app.listen(port, () => {
 
 app.get('/usuarioUpdate', (req, res) => {
     const id = req.query.id
-    const usuario = db.prepare('SELECT * from usuarios where id = ?').get(id)
+    const usuario = db.prepare('SELECT * from usuarios WHERE id = ?').get(id)
     res.render("usuarioUpdate", {usuario: usuario});
   })
 
@@ -137,7 +137,7 @@ app.get('/usuarioUpdate', (req, res) => {
 
   app.get('/productoUpdate', (req, res) => {
     const id = req.query.id
-    const producto = db.prepare('SELECT * from productos where id = ?').get(id)
+    const producto = db.prepare('SELECT * from productos WHERE id = ?').get(id)
     res.render("productoUpdate", {producto: producto});
   })
   
@@ -155,7 +155,7 @@ app.get('/usuarioUpdate', (req, res) => {
   
   app.get('/comandaUpdate', (req, res) => {
     const id = req.query.id
-    const comanda = db.prepare('SELECT * from comandas where id = ?').get(id)
+    const comanda = db.prepare('SELECT * from comandas WHERE id = ?').get(id)
     const usuarios = db.prepare('SELECT * from usuarios').all()
     const productos = db.prepare('SELECT * from productos').all()
     res.render("comandaUpdate", {comanda: comanda, usuarios: usuarios, productos:productos});
@@ -164,9 +164,9 @@ app.get('/usuarioUpdate', (req, res) => {
   app.post("/comandaUpdate", (req, res) => {
     console.log(req.body)
     if (req.body) {
-      if (req.body.id_usuario && req.body.id_producto && req.body.id) {
-        const statement = db.prepare('UPDATE comandas SET id_usuarios = ?, id_productos = ? WHERE id = ?')
-        const info = statement.run(req.body.id_usuario, req.body.id_producto, req.body.id)
+      if (req.body.id_usuarios && req.body.id_productos && req.body.id) {
+        const statement = db.prepare('UPDATE comandas SET id_usuario = ?, id_producto = ? WHERE id = ?')
+        const info = statement.run(req.body.id_usuarios, req.body.id_productos, req.body.id)
         console.log(info)
       }
     }
