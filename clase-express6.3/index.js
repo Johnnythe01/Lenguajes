@@ -158,7 +158,7 @@ app.get('/usuarioUpdate', (req, res) => {
     const comanda = db.prepare('SELECT * from comandas WHERE id = ?').get(id)
     const usuarios = db.prepare('SELECT * from usuarios').all()
     const productos = db.prepare('SELECT * from productos').all()
-    res.render("comandaUpdate", {comanda: comanda, usuarios: usuarios, productos:productos});
+    res.render("comandaUpdate", {comanda: comanda, usuarios: usuarios, productos: productos});
   })
   
   app.post("/comandaUpdate", (req, res) => {

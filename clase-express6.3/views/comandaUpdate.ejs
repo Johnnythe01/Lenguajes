@@ -14,7 +14,7 @@
         <select id="id_productos" name="id_productos">
             <% productos.forEach((producto, index)=>{ %>
                 <option value="<%= producto.id %>" selected='<%= comanda.id_productos %>'>
-                    <%= productos.nom %>
+                    <%= producto.nom %>
                 </option>
                 <% }) %>
         </select>
