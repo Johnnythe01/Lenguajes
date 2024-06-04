@@ -39,7 +39,7 @@ app.get('/usuario', (req, res) => {
 })
 
 // Capturaremos el submit del form
-app.post("/usuario", (req, res) => {
+app.post('/usuario', (req, res) => {
     console.log(req.body);
     if (req.body.nombre && req.body.email) {
         //insert
@@ -60,7 +60,7 @@ app.get('/producto', (req, res) => {
 })
 
 // Capturaremos el submit del form
-app.post("/producto", (req, res) => {
+app.post('/producto', (req, res) => {
     console.log(req.body);
     if (req.body.nom && req.body.precio) {
         // Insert
@@ -123,7 +123,7 @@ app.get('/usuarioUpdate', (req, res) => {
     res.render("usuarioUpdate", {usuario: usuario});
   })
 
-  app.post("/usuarioUpdate", (req, res) => {
+  app.post('/usuarioUpdate', (req, res) => {
     console.log(req.body)
     if (req.body) {
       if (req.body.nombre && req.body.email && req.body.id) {
@@ -154,21 +154,21 @@ app.get('/usuarioUpdate', (req, res) => {
   })
   
   app.get('/comandaUpdate', (req, res) => {
-    const id = req.query.id
+    const id = req.query.id;
     const comanda = db.prepare('SELECT * from comandas WHERE id = ?').get(id)
     const usuarios = db.prepare('SELECT * from usuarios').all()
     const productos = db.prepare('SELECT * from productos').all()
     res.render("comandaUpdate", {comanda: comanda, usuarios: usuarios, productos:productos});
   })
   
-  app.post("/comandaUpdate", (req, res) => {
+  app.post('/comandaUpdate', (req, res) => {
     console.log(req.body)
     if (req.body) {
       if (req.body.id_usuarios && req.body.id_productos && req.body.id) {
-        const statement = db.prepare('UPDATE comandas SET id_usuario = ?, id_producto = ? WHERE id = ?')
+        const statement = db.prepare('UPDATE comandas SET id_usuarios = ?, id_productos = ? WHERE id = ?')
         const info = statement.run(req.body.id_usuarios, req.body.id_productos, req.body.id)
         console.log(info)
       }
     }
-    res.redirect("comandas");
+    res.redirect("/comandas");
   })
