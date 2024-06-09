@@ -2,6 +2,7 @@
 
     <h2>Edición de Comanda</h2>
     <form action="/comandaUpdate" method="post">
+        <input type="text" name="id" id="id" hidden value="<%= comanda.id %>">
         <label for="usuario">Usuario </label>
         <select id="id_usuarios" name="id_usuarios">
             <% usuarios.forEach((usuario, index)=>{ %>
