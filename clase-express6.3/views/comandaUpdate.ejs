@@ -4,17 +4,17 @@
     <form action="/comandaUpdate" method="post">
         <label for="usuario">Usuario </label>
         <select id="id_usuarios" name="id_usuarios">
-            <% usuarios.forEach((usuarios, index)=>{ %>
-                <option value="<%= usuarios.id %>" selected='<%= comanda.id_usuarios %>'>
-                    <%= usuarios.nombre %>
+            <% usuarios.forEach((usuario, index)=>{ %>
+                <option value="<%= usuario.id %>" <%= usuario.id == comanda.id_usuarios ? 'selected="selected"' : '' %>>
+                    <%= usuario.nombre %>
                 </option>
                 <% }) %>
         </select>
         <label for="producto">Producto </label>
         <select id="id_productos" name="id_productos">
             <% productos.forEach((producto, index)=>{ %>
-                <option value="<%= producto.id %>" selected='<%= comanda.id_productos %>'>
-                    <%= productos.nom %>
+                <option value="<%= producto.id %>" <%= producto.id == comanda.id_productos ? 'selected="selected"' : '' %>>
+                    <%= producto.nom %>
                 </option>
                 <% }) %>
         </select>
